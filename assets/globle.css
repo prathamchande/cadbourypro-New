@@ -45,10 +45,23 @@ html {
 }
 
 body {
-  background-image: url(../assets/img/1bb.png), linear-gradient(135deg, #6a00df 7%, #370076 39%, #31006f 54%);
+  background: #33026f;
   background-position: 53% 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 500% 100%;
+  color: black;
+  font-size: 25px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-blend-mode: soft-light;
+  backdrop-filter: blur(100px);
+}
+body.loaded {
+  background: url(../assets/img/1bb.png), linear-gradient(135deg, #6a00df 7%, #370076 39%, #31006f 54%);
+  background-position: 53% 100%;
+  background-repeat: no-repeat;
+  background-size: 150% 100%;
   color: black;
   font-size: 25px;
   min-height: 100vh;
@@ -56,6 +69,7 @@ body {
   overflow: hidden;
   background-blend-mode: soft-light;
   backdrop-filter: blur(0);
+  transition: backdrop-filter 0.5s ease, background-size 2s ease;
 }
 
 article,
