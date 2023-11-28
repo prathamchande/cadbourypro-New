@@ -51,3 +51,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+// Navigation code
+
+// Global functions  
+
+// function redirectToContactPage() {
+//     setTimeout(function () {
+//         window.location.href = 'contact.html';
+//     }, 10000); // 10000 milliseconds = 10 seconds
+// }
+
+// redirectToContactPage();
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Redirect from index.html to contact.html after 10 seconds
+//     if (document.getElementById('index')) {
+//         setTimeout(function () {
+//             redirectToContactPage();
+//         }, 10000);
+//     }
+// });
+
+// function redirectToContactPage() {
+//     document.getElementById('index').style.display = 'none';
+//     document.getElementById('contact').style.display = 'block';
+// }
+
+// function redirectToInfoPage() {
+//     document.getElementById('contact').style.display = 'none';
+//     document.getElementById('info').style.display = 'block';
+// }
+
+// function redirectToIndexPage() {
+//     document.getElementById('info').style.display = 'none';
+//     document.getElementById('index').style.display = 'block';
+// }
+
+
+
+// commonScript.js
+
+// Function to redirect to contact.html after 10 seconds// commonScript.js
+
+// Function to redirect to contact.html after 10 seconds
+function redirectToContactPage() {
+    setTimeout(function () {
+        window.location.href = 'contact.html';
+    }, 10000); // 10000 milliseconds = 10 seconds
+}
+
+// Function to redirect to info.html
+function redirectToInfoPage() {
+    window.location.href = 'info.html';
+}
+
+// Function to redirect to index.html
+function redirectToIndexPage() {
+    window.location.href = 'index.html';
+}
+
+// Event listener for the submit button in contact.html
+document.addEventListener('DOMContentLoaded', function () {
+    var submitButton = document.getElementById('submitButton');
+    
+    if (submitButton) {
+        submitButton.addEventListener('click', function () {
+            // Call the function to redirect to info.html
+            redirectToInfoPage();
+        });
+    }
+
+    // Check if the current page is index.html before calling redirectToContactPage()
+    if (window.location.pathname.endsWith('index.html')) {
+        // Call the function to redirect to contact.html after 10 seconds
+        redirectToContactPage();
+    }
+});
