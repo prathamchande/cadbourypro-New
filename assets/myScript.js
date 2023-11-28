@@ -70,8 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.contactBody').classList.add('loaded');
   } else if (window.location.pathname.endsWith("info.html")) {
    document.querySelector('.infoBody').classList.add('loaded');
-  }else{
-    document.body.classList.remove("loaded");
+  }
+  else{
+    return;
+  //  document.body.classList.remove("loaded");
   }
 });
 
