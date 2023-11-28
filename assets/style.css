@@ -16,21 +16,82 @@
 .mainPage.spalshBody .mobile-container .mainWallpaper {
   position: relative;
 }
+.mainPage.spalshBody .mobile-container .mainWallpaper.dsNone {
+  display: none;
+}
 .mainPage.spalshBody .mobile-container .mainWallpaper .bgWrap,
 .mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap,
-.mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap {
+.mainPage.spalshBody .mobile-container .mainWallpaper .phoneWrap {
   position: absolute;
+  overflow: hidden;
 }
 .mainPage.spalshBody .mobile-container .mainWallpaper .bgWrap {
-  max-height: 400px;
   transform: rotate3d(1, 1, 1, 360deg);
-  overflow: hidden;
 }
 .mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap {
-  max-height: 400px;
-  overflow: hidden;
   transform: scale(5);
   opacity: 0;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .phoneWrap {
+  transform: translate(70%, 35%) scale(2);
+  opacity: 0;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap {
+  opacity: 0;
+  transform: translate(20%, 85%) scale(0);
+  flex-flow: column;
+  align-items: center;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text {
+  font-family: Lato, sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+  transform: translateX(10px);
+  display: flex;
+  justify-content: center;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .classForSpacing {
+  min-width: 160px;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .alizarin {
+  color: #e74c3c;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .wisteria {
+  color: #8e44ad;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .peter-river {
+  color: #3498db;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .emerald {
+  color: #2ecc71;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .birthdayTextWrap .rotating-text .sun-flower {
+  color: #f1c40f;
 }
 .mainPage.spalshBody.loaded .mobile-container .mainWallpaper .bgWrap {
   animation-name: bgrotationBox;
@@ -41,6 +102,21 @@
   transform: scale(1);
   opacity: 1;
   transition: transform 2s ease 1s, opacity 1s ease 1s;
+}
+.mainPage.spalshBody.loaded .mobile-container .mainWallpaper .phoneWrap {
+  transform: translate(70vw, 30vh) scale(0.4);
+  opacity: 1;
+  transition: transform 2s ease 4s, opacity 1s ease 5s;
+  left: -30vw;
+  top: -30vw;
+}
+.mainPage.spalshBody.loaded .mobile-container .mainWallpaper .birthdayTextWrap {
+  position: absolute;
+  opacity: 1;
+  transform: translate(20%, 85%) scale(0.8);
+  transition: transform 2s ease 3s, opacity 1s ease 2s;
+  top: -50%;
+  left: -50%;
 }
 .mainPage.contactBody .mobile-container h1 {
   color: green;
