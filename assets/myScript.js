@@ -65,11 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.endsWith("index.html")) {
     // Call the function to redirect to contact.html after 10 seconds
     redirectToContactPage();
-    document.body.classList.add("loaded");
+    document.querySelector('.spalshBody').classList.add('loaded');
   } else if (window.location.pathname.endsWith("contact.html")) {
-    document.body.classList.add("loaded");
+    document.querySelector('.contactBody').classList.add('loaded');
   } else if (window.location.pathname.endsWith("info.html")) {
-    document.body.classList.add("loaded");
+   document.querySelector('.infoBody').classList.add('loaded');
+  }else{
+    document.body.classList.remove("loaded");
   }
 });
 

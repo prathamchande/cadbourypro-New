@@ -18,6 +18,18 @@
         max-width: 768px;
         margin: auto;
         padding: 20px;
+
+        .blurView {
+            //         position: absolute;
+            // background: #8c2ef600;
+            // height: 391px;
+            // width: 100%;
+            // box-shadow: -20px 1px 20px 0px #2f0368;
+            // top: 0;
+            // left: 0;
+            // z-index: -5;
+            // opacity: 0.2;
+        }
     }
 
 
@@ -33,7 +45,7 @@
 
 
 
-            /////////////////////////////////////////
+    /////////////////////////////////////////
     //contactBody page
     &.contactBody {
 
@@ -41,14 +53,14 @@
             h1 {
                 color: green;
                 transition: color 10s ease;
-              
+
             }
         }
     }
 
 
 
-        /////////////////////////////////////////
+    /////////////////////////////////////////
     //infoBody page
     &.infoBody {
         .mobile-container {
