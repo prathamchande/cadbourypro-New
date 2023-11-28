@@ -1,0 +1,23 @@
+.mainPage {
+    // desktop css
+    .desktop-message {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        background-color: #e74c3c;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+    // Mobile css
+    .mobile-container {
+        display: none;
+        max-width: 768px;
+        margin: auto;
+        padding: 20px;
+    }
+
+
+}

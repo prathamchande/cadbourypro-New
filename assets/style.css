@@ -1,0 +1,17 @@
+.mainPage .desktop-message {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mainPage .mobile-container {
+  display: none;
+  max-width: 768px;
+  margin: auto;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
