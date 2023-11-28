@@ -61,14 +61,22 @@
                
                 }
 
-                .boxWrap {}
-
+                .boxWrap {
+                    max-height: 400px;
+                    overflow: hidden;
+                    transform: scale(5);
+                    opacity: 0;
+                    // transition: opacity 1s ease 10s;
+                    
+                }
+               
                 .boxWrap {}
             }
 
           
         }
 
+    
         &.loaded {
             .mobile-container {
                 .mainWallpaper {
@@ -80,7 +88,12 @@
                         // transition: transform 1s ease; 
                     }
 
-                    .boxWrap {}
+                    .boxWrap {
+                        transform: scale(1);
+                        opacity: 1;
+                        transition: transform 2s ease 1s, opacity 1s ease 1s;
+                       // animation-direction:reverse;
+                    }
 
                     .boxWrap {}
                 }

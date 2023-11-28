@@ -65,7 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.endsWith("index.html")) {
     // Call the function to redirect to contact.html after 10 seconds
     redirectToContactPage();
-    document.querySelector('.spalshBody').classList.add('loaded');
+    setTimeout(() => {
+             
+        document.querySelector('.spalshBody').classList.add('loaded');
+            }, 100); 
   } else if (window.location.pathname.endsWith("contact.html")) {
     document.querySelector('.contactBody').classList.add('loaded');
   } else if (window.location.pathname.endsWith("info.html")) {

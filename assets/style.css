@@ -26,10 +26,21 @@
   transform: rotate3d(1, 1, 1, 360deg);
   overflow: hidden;
 }
+.mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap {
+  max-height: 400px;
+  overflow: hidden;
+  transform: scale(5);
+  opacity: 0;
+}
 .mainPage.spalshBody.loaded .mobile-container .mainWallpaper .bgWrap {
   animation-name: bgrotationBox;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
+}
+.mainPage.spalshBody.loaded .mobile-container .mainWallpaper .boxWrap {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 2s ease 1s, opacity 1s ease 1s;
 }
 .mainPage.contactBody .mobile-container h1 {
   color: green;
