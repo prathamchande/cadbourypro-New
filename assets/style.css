@@ -13,8 +13,23 @@
   margin: auto;
   padding: 20px;
 }
-.mainPage.spalshBody .mobile-container h1 {
-  color: red;
+.mainPage.spalshBody .mobile-container .mainWallpaper {
+  position: relative;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .bgWrap,
+.mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap,
+.mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap {
+  position: absolute;
+}
+.mainPage.spalshBody .mobile-container .mainWallpaper .bgWrap {
+  max-height: 400px;
+  transform: rotate3d(1, 1, 1, 360deg);
+  overflow: hidden;
+}
+.mainPage.spalshBody.loaded .mobile-container .mainWallpaper .bgWrap {
+  animation-name: bgrotationBox;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 .mainPage.contactBody .mobile-container h1 {
   color: green;
@@ -22,6 +37,18 @@
 }
 .mainPage.infoBody .mobile-container h1 {
   color: yellow;
+}
+
+@keyframes bgrotationBox {
+  0% {
+    transform: rotate3d(1, 1, 1, 240deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 1, 270deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

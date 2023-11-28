@@ -58,7 +58,7 @@ body {
   backdrop-filter: blur(100px);
 }
 body.loaded {
-  background-size: 150% 100%;
+  background-size: 200% 100%;
   backdrop-filter: blur(0);
   transition: backdrop-filter 0.1s ease, background-size 1s ease;
 }
@@ -157,6 +157,7 @@ figure {
 
 img {
   border-style: none;
+  max-width: 100%;
 }
 
 code,

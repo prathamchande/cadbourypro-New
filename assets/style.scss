@@ -1,4 +1,12 @@
+
+
+
 .mainPage {
+
+
+    // .loaded class use dynamic for onload
+
+
 
     // desktop css
     .desktop-message {
@@ -37,8 +45,45 @@
     //spalshBody page
     &.spalshBody {
         .mobile-container {
-            h1 {
-                color: red;
+            .mainWallpaper {
+                position: relative;
+
+                .bgWrap,
+                .boxWrap,
+                .boxWrap {
+                    position: absolute;
+                }
+
+                .bgWrap {
+                    max-height: 400px;
+                    transform: rotate3d(1, 1, 1, 360deg);
+                    overflow: hidden;
+               
+                }
+
+                .boxWrap {}
+
+                .boxWrap {}
+            }
+
+          
+        }
+
+        &.loaded {
+            .mobile-container {
+                .mainWallpaper {
+
+                    .bgWrap {
+                        animation-name: bgrotationBox;
+                        animation-duration: 0.5s;
+                        animation-timing-function: ease-in;
+                        // transition: transform 1s ease; 
+                    }
+
+                    .boxWrap {}
+
+                    .boxWrap {}
+                }
             }
         }
     }
@@ -74,3 +119,18 @@
 
 
 }
+
+
+
+
+
+
+
+
+//animation for bg rotaion main page
+
+@keyframes bgrotationBox {
+    0%   { transform: rotate3d(1, 1, 1, 240deg)}
+    50%  { transform: rotate3d(1, 1, 1, 270deg)}
+    100% { transform: rotate3d(1, 1, 1, 360deg)}
+  }
