@@ -26,7 +26,8 @@
   overflow: hidden;
 }
 .mainPage.spalshBody .mobile-container .mainWallpaper .bgWrap {
-  transform: rotate3d(1, 1, 1, 360deg);
+  transform: scale(0);
+  opacity: 0;
 }
 .mainPage.spalshBody .mobile-container .mainWallpaper .boxWrap {
   transform: scale(5);
@@ -94,9 +95,9 @@
   color: #f1c40f;
 }
 .mainPage.spalshBody.loaded .mobile-container .mainWallpaper .bgWrap {
-  animation-name: bgrotationBox;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 1s ease 5s, opacity 1s ease 5s;
 }
 .mainPage.spalshBody.loaded .mobile-container .mainWallpaper .boxWrap {
   transform: scale(1);
@@ -124,18 +125,6 @@
 }
 .mainPage.infoBody .mobile-container h1 {
   color: yellow;
-}
-
-@keyframes bgrotationBox {
-  0% {
-    transform: rotate3d(1, 1, 1, 240deg);
-  }
-  50% {
-    transform: rotate3d(1, 1, 1, 270deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

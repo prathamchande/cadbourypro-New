@@ -61,8 +61,9 @@
                 }
 
                 .bgWrap {
-                    transform: rotate3d(1, 1, 1, 360deg);
-                    
+                    //transform: rotate3d(1, 1, 1, 360deg);
+                    transform: scale(0);
+                    opacity: 0;
                
                 }
 
@@ -157,10 +158,12 @@
 
                  
                     .bgWrap {
-                        animation-name: bgrotationBox;
-                        animation-duration: 0.5s;
-                        animation-timing-function: ease-in;
-                        // transition: transform 1s ease; 
+                        // animation-name: bgrotationBox;
+                        // animation-duration: 0.5s;
+                        // animation-timing-function: ease-in;
+                        transform: scale(1);
+                        opacity: 1;
+                         transition: transform 1s ease 5s, opacity 1s ease 5s; 
                     }
 
                     .boxWrap {
@@ -232,8 +235,8 @@
 
 //animation for bg rotaion main page
 
-@keyframes bgrotationBox {
-    0%   { transform: rotate3d(1, 1, 1, 240deg)}
-    50%  { transform: rotate3d(1, 1, 1, 270deg)}
-    100% { transform: rotate3d(1, 1, 1, 360deg)}
-  }
+// @keyframes bgrotationBox {
+//     0%   { transform: rotate3d(1, 1, 1, 240deg)}
+//     50%  { transform: rotate3d(1, 1, 1, 270deg)}
+//     100% { transform: rotate3d(1, 1, 1, 360deg)}
+//   }
