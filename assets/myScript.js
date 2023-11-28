@@ -63,6 +63,8 @@ function navigate(e) {
     window.location.href = "index.html";
   } else if (e == "info") {
     window.location.href = "info.html";
+  } else if (e == "contact") {
+    window.location.href = "contact.html";
   }
 }
 
@@ -80,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.contactBody').classList.add('loaded');
   } else if (window.location.pathname.endsWith("info.html")) {
    document.querySelector('.infoBody').classList.add('loaded');
-  }
+  } else if (window.location.pathname.endsWith("system.html")) {
+    document.querySelector('.designSystem').classList.add('loaded');
+   }
   else{
     return;
   //  document.body.classList.remove("loaded");
