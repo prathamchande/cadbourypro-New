@@ -40,7 +40,40 @@ document.addEventListener("DOMContentLoaded", function () {
 //         window.location.href = "login.html";
 //     }, 3000000); // Navigate to the next page after 30 seconds
 // });
+/////////////////////////////////////////////////////////////////////////
+//header script
 
+// Init the mobile menu
+document.getElementById("hamburger").addEventListener("click", function(event) {
+    console.log("header");
+     event.preventDefault();
+     document.getElementById("nav").classList.add("showNav");
+     var winHeight = window.outerHeight;
+     // Set the window height of the mobile menu when engaged!
+     document.getElementById('menuWrapper').style.height = winHeight + 'px';
+   });
+   
+   document.getElementById("close").addEventListener("click", function(event) {
+     event.preventDefault();
+     document.getElementById("nav").classList.remove("showNav");
+     // Set the window height of the mobile menu when not engaged!
+     document.getElementById('menuWrapper').style.height = 'auto';
+   });
+   
+   // On hover apply a class to the dropdown '.hov'
+   var menuItems = document.querySelectorAll('#menuWrapper ul li');
+   menuItems.forEach(function(item) {
+     item.addEventListener('mouseover', function() {
+       var submenu = this.querySelector('ul');
+       // check if it has a class of .hov 
+       if (submenu.classList.contains('hov')) {
+         submenu.classList.remove('hov');
+       } else {
+         submenu.classList.add('hov');
+       }
+     });
+   });
+   
 /////////////////////////////////////////////////////////////////////////
 // Navigation code
 
@@ -139,7 +172,6 @@ setInterval(rotateText, 4000);
 
 
 
-/////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////
 
