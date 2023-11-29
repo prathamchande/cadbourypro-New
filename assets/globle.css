@@ -3,6 +3,11 @@
   color: white;
 }
 
+.nudge-popup {
+  display: none;
+  /* Add any additional styles for the nudge popup */
+}
+
 @font-face {
   font-family: "DairyMilkFontMedium";
   src: url("../assets/fonts/DairyMilkFont-Medium.otf") format("opentype");

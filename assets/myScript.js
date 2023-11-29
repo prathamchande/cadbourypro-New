@@ -198,8 +198,52 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
 
 
 
-////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%
 
+
+  //Validations for input
+  function showNudgePopup(nudgeId) {
+    var nudgePopup = document.getElementById(nudgeId);
+    nudgePopup.style.display = "block";
+
+    // Hide nudge popup after 3 seconds
+    setTimeout(function () {
+      nudgePopup.style.display = "none";
+    }, 3000);
+  }
+
+  function hideNudgePopup(nudgeId) {
+    var nudgePopup = document.getElementById(nudgeId);
+    nudgePopup.style.display = "none";
+  }
+
+  function validateAndNavigate(submitType) {
+    var usernameInput = document.getElementById("username");
+    var mobileNumberInput = document.getElementById("mobileNumber");
+
+    // Validate username
+    if (/[^a-zA-Z]/.test(usernameInput.value)) {
+      document.getElementById("usernameNudge").textContent = "You are not allowed numbers or special characters in the username.";
+      showNudgePopup("usernameNudge");
+      return;
+    } else {
+      hideNudgePopup("usernameNudge");
+    }
+
+    // Validate mobile number
+    if (!/^\d+$/.test(mobileNumberInput.value)) {
+      document.getElementById("mobileNumberNudge").textContent = "You are not allowed any characters in the mobile number.";
+      showNudgePopup("mobileNumberNudge");
+      return;
+    } else {
+      hideNudgePopup("mobileNumberNudge");
+    }
+
+    // If all validations pass, proceed with navigation
+    navigate(submitType);
+  }
+
+
+////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%  
 var currentContainerIndex = 0;
 var containerIds = ['firstMainContainerID', 'secondMainContainerID', 'thirdMainContainerID'];
 var progressBarIds = ['firstProgBar', 'secondProgBar', 'thirdProgBar'];
