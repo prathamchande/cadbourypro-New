@@ -8,16 +8,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/globle.css">
   <link rel="stylesheet" href="assets/style.css">
-  <title>system page</title>
+  <title>Main page</title>
   <style>
     /* sass --watch assets/style.scss assets/style.css */
-       /* sass --watch assets/globle.scss assets/globle.css */
+    /* sass --watch assets/globle.scss assets/globle.css */
     /* transition: all 10s ease; */
   </style>
 </head>
 
 <body class="mainPage designSystem">
+  <header id="nav">
+    <div class="contained">
+        <div id="logo">
+          <a href="#">
+            <!-- <img src="assets/img/birthdayLogo.png" alt=""> -->
+        </a>
+        </div>
+        <div class="container">
+            <div id="hamburger"><span></span><span></span><span></span></div>
+            <div id="close"><span></span></div>
+            <div id="menuWrapper">
+                <ul>
+                    
 
+         <li>How to Participate</li>
+         <li>Terms & Conditions</li>
+       
+         <li>Pricacy Policy</li>
+       
+         <li>Contact Us</li>
+       
+         <li>Tutorial Video</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
 
   <!-- desktop -->
   <div class="desktop-message">
@@ -27,11 +54,36 @@
 
 
   <!-- mobile -->
-  <div class="mobile-container">
+  <div id="mobileContener" class="mobile-container">
     <!-- Your mobile UI content goes here -->
-    <h1>Welcome to Mobile UI System page</h1>
-
+    
+  <!-- Pagination content -->
+    <div class="progressBarWrapper">
+      <ul>
+          <li class="done">
+             
+          </li>
+          <li class="active">
+             
+          </li>
+          <li>
+            
+          </li>
+          <li>
+              
+          </li>
+          <li>
+             
+          </li>
+          <li>
+             
+          </li>
+      </ul>
   </div>
+
+
+<!-- middle main content here -->
+<div class="middleContent">
 
   <button class="commonBtn" onclick="navigate('contact')"> Go to Contact</button>
 
@@ -106,12 +158,31 @@
 
 
 
-<div id="background-wrap">
-  <div class="bubble x1"></div>
-  <div class="bubble x2"></div>
-  <div class="bubble x3"></div>
-  <div class="bubble x4"></div>
 </div>
+
+
+
+
+
+<!-- footer content -->
+  <div id="footerId" class="mainFooter footerBg">
+    <button class="commonBtn" onclick="navigate('home')"> Home</button>
+  
+  </div>
+  </div>
+<!-- mobile-container END here -->
+
+
+
+
+<!-- bg bubble animation -->
+  <div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+  </div>
+
 
   <script src="assets/myScript.js"></script>
 </body>

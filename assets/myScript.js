@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function redirectToContactPage() {
     setTimeout(function () {
-     // window.location.href = "contact.html";
+     window.location.href = "contact.html";
   
       //add class after sometime for display none main
       // setTimeout(() => {
@@ -41,7 +41,9 @@ function redirectToContactPage() {
       window.location.href = "info.html";
     } else if (e == "contact") {
       window.location.href = "contact.html";
-    }
+    }else if (e == "design") {
+        window.location.href = "system.html";
+      }
   }
   
   // Event listener for the submit button in contact.html

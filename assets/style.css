@@ -10,6 +10,7 @@
 .mainPage .mobile-container {
   display: none;
   margin-top: 70px;
+  padding: 0 24px;
 }
 .mainPage.spalshBody .mobile-container .mainWallpaper {
   position: relative;
@@ -122,11 +123,58 @@
   top: -50%;
   left: -50%;
 }
+.mainPage.contactBody .mobile-container {
+  display: block;
+  max-height: calc(100vh - 70px);
+  overflow: scroll;
+}
 .mainPage.contactBody .mobile-container h1 {
   color: green;
   transition: color 10s ease;
 }
+.mainPage.contactBody .mobile-container .progressBarWrapper {
+  padding: 40px;
+  padding-bottom: 0;
+}
+.mainPage.contactBody .mobile-container .progressBarWrapper ul {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+.mainPage.contactBody .mobile-container .progressBarWrapper ul li {
+  width: 14px;
+  height: 14px;
+  background: none;
+  border-radius: 50%;
+  list-style: none;
+  border: 2px solid;
+  border-color: #fff;
+}
+.mainPage.contactBody .mobile-container .progressBarWrapper ul li.done {
+  background: #f3cb7f;
+  border-color: #f3cb7f;
+}
+.mainPage.contactBody .mobile-container .progressBarWrapper ul li.active {
+  border-color: #f3cb7f;
+}
+.mainPage.infoBody .mobile-container {
+  display: block;
+  max-height: calc(100vh - 70px);
+  overflow: scroll;
+}
 .mainPage.infoBody .mobile-container h1 {
+  color: yellow;
+}
+.mainPage.designSystem .mobile-container {
+  display: block;
+  max-height: calc(100vh - 70px);
+  overflow: scroll;
+}
+.mainPage.designSystem .mobile-container h1 {
   color: yellow;
 }
 
@@ -260,7 +308,7 @@
   /* IE10+ */
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#80ffffff", endColorstr="#00ffffff",GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80ffffff", endColorstr="#00ffffff", GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -471,6 +519,22 @@ header#nav #menuWrapper {
   header .contained {
     padding-top: 5px;
   }
+}
+.mainFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: -24px;
+  text-align: center;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+.mainFooter.hideFooter {
+  display: none;
+}
+.mainFooter.footerBg {
+  background: #00000017;
+  backdrop-filter: blur(10px);
 }
 
 /*# sourceMappingURL=style.css.map */
