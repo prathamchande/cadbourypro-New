@@ -18,6 +18,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /////////////////////////////////////////////////////////////////////////
 
+// Navigation code
+
+function redirectToContactPage() {
+    setTimeout(function () {
+     // window.location.href = "contact.html";
+  
+      //add class after sometime for display none main
+      // setTimeout(() => {
+      //     document.querySelector('.mainWallpaper').classList.add('dsNone');
+      //         }, 100); 
+  
+  
+    }, 10000); // 10000 milliseconds = 10 seconds
+  }
+  
+  // Function to redirect to info.html
+  function navigate(e) {
+    if (e == "home") {
+      window.location.href = "index.html";
+    } else if (e == "info") {
+      window.location.href = "info.html";
+    } else if (e == "contact") {
+      window.location.href = "contact.html";
+    }
+  }
+  
+  // Event listener for the submit button in contact.html
+  document.addEventListener("DOMContentLoaded", function () {
+    // Check if the current page is index.html before calling redirectToContactPage()
+    if (window.location.pathname.endsWith("index.html")) {
+      // Call the function to redirect to contact.html after 10 seconds
+      redirectToContactPage();
+      setTimeout(() => {
+               
+          document.querySelector('.spalshBody').classList.add('loaded');
+              }, 100); 
+    } else if (window.location.pathname.endsWith("contact.html")) {
+      document.querySelector('.contactBody').classList.add('loaded');
+    } else if (window.location.pathname.endsWith("info.html")) {
+     document.querySelector('.infoBody').classList.add('loaded');
+    } else if (window.location.pathname.endsWith("system.html")) {
+      document.querySelector('.designSystem').classList.add('loaded');
+     }
+    else{
+      return;
+    //  document.body.classList.remove("loaded");
+    }
+  });
+  
+  /////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     setTimeout(() => {
 //         window.location.href = "login.html";
@@ -42,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 /////////////////////////////////////////////////////////////////////////
 //header script
-
+if (window.location.pathname.endsWith("contact.html")) {
 // Init the mobile menu
 document.getElementById("hamburger").addEventListener("click", function(event) {
     console.log("header");
@@ -73,59 +128,16 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
        }
      });
    });
+}
+
    
 /////////////////////////////////////////////////////////////////////////
-// Navigation code
 
-function redirectToContactPage() {
-  setTimeout(function () {
-   // window.location.href = "contact.html";
-
-    //add class after sometime for display none main
-    // setTimeout(() => {
-    //     document.querySelector('.mainWallpaper').classList.add('dsNone');
-    //         }, 100); 
-
-
-  }, 10000); // 10000 milliseconds = 10 seconds
-}
-
-// Function to redirect to info.html
-function navigate(e) {
-  if (e == "home") {
-    window.location.href = "index.html";
-  } else if (e == "info") {
-    window.location.href = "info.html";
-  } else if (e == "contact") {
-    window.location.href = "contact.html";
-  }
-}
-
-// Event listener for the submit button in contact.html
-document.addEventListener("DOMContentLoaded", function () {
-  // Check if the current page is index.html before calling redirectToContactPage()
-  if (window.location.pathname.endsWith("index.html")) {
-    // Call the function to redirect to contact.html after 10 seconds
-    redirectToContactPage();
-    setTimeout(() => {
-             
-        document.querySelector('.spalshBody').classList.add('loaded');
-            }, 100); 
-  } else if (window.location.pathname.endsWith("contact.html")) {
-    document.querySelector('.contactBody').classList.add('loaded');
-  } else if (window.location.pathname.endsWith("info.html")) {
-   document.querySelector('.infoBody').classList.add('loaded');
-  } else if (window.location.pathname.endsWith("system.html")) {
-    document.querySelector('.designSystem').classList.add('loaded');
-   }
-  else{
-    return;
-  //  document.body.classList.remove("loaded");
-  }
-});
-
-/////////////////////////////////////////////////////////////////////////
 //text rotation
+
+if (window.location.pathname.endsWith("index.html")) {
+
+
 
 let words = document.querySelectorAll(".word");
 
@@ -171,7 +183,7 @@ rotateText();
 setInterval(rotateText, 4000);
 
 
-
+}
 
 /////////////////////////////////////////////////////////////////////////
 
