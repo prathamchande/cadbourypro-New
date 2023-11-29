@@ -74,6 +74,22 @@
 
   <div id="firstMainContainerID" class="firstMainContainer activeCont">
     Hello world first
+    <p>Hello world first</p>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+  
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="text" id="mobileNumber" placeholder="Enter your mobile number">
+  
+    <!-- Nudge popup for username -->
+    <div id="usernameNudge" class="nudge-popup">
+      You are not allowed numbers or special characters in the username.
+    </div>
+  
+    <!-- Nudge popup for mobile number -->
+    <div id="mobileNumberNudge" class="nudge-popup">
+      You are not allowed any characters in the mobile number.
+    </div>
   </div>
   <div id="secondMainContainerID" class="secondMainContainer hiddenCont">
     Hello world second
