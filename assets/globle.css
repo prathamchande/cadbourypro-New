@@ -31,6 +31,51 @@
   font-family: "GibsonSemibold";
   src: url("../assets/fonts/Gibson-SemiBold.ttf") format("truetype");
 }
+.text1,
+.fSmiBold {
+  font-family: GibsonSemibold;
+}
+
+.fReg {
+  font-family: GibsonRegular;
+}
+
+.fLight {
+  font-family: GibsonLight;
+}
+
+.fIta {
+  font-family: GibsonItalic;
+}
+
+.fBold {
+  font-family: GibsonBold;
+}
+
+.fGib {
+  font-family: Gibson;
+}
+
+.fDairy {
+  font-family: DairyMilkFontMedium;
+}
+
+.fontWhite {
+  color: #fff;
+}
+
+.fontBlue {
+  color: #340073;
+}
+
+.fontGary {
+  color: #808080;
+}
+
+.bgYellow {
+  background: #e7b464;
+}
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -58,6 +103,7 @@ body {
   backdrop-filter: blur(100px);
   margin: 0;
   padding: 0 24px;
+  letter-spacing: 1.5px;
 }
 body.loaded {
   background-size: 200% 100%;

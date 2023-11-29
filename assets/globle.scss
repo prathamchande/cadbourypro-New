@@ -54,10 +54,45 @@
 
 
 
+.text1,
+.fSmiBold{
+    font-family: GibsonSemibold;
+}
+.fReg{
+    font-family: GibsonRegular;
+}
+.fLight{
+    font-family: GibsonLight;
+}
+.fIta{
+    font-family: GibsonItalic;
+}
 
 
+.fBold{
+    font-family: GibsonBold;
+}
+.fGib{
+    font-family: Gibson;
+}
+.fDairy{
+    font-family: DairyMilkFontMedium;
+}
 
 
+.fontWhite{
+    color: #fff;
+}
+.fontBlue{
+    color: #340073;
+}
+.fontGary{
+    color: #808080;
+}
+
+.bgYellow{
+    background: #e7b464;
+}
 
 
 
@@ -118,7 +153,7 @@ body {
     backdrop-filter: blur(100px);
     margin: 0;
     padding: 0 24px;
-    
+    letter-spacing: 1.5px;
     //    transition: all 10s ease 10s;
 
 
