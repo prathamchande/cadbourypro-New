@@ -222,6 +222,7 @@ function validateAndNavigate(submitType) {
     var mobileNumberInput = document.getElementById('mobileNumber');
     var vehicle1Checkbox = document.getElementById('vehicle1');
     var vehicle2Checkbox = document.getElementById('vehicle2');
+    var selectedCar = document.getElementById('cars');
 
     // Validate username
     if (!usernameInput.value) {
@@ -253,9 +254,18 @@ function validateAndNavigate(submitType) {
         hideNudgePopup();
     }
 
+    // Validate selected car only when moving from the second to the third block
+    if (submitType === 'secondSubmit' && selectedCar.value === "") {
+        showNudgePopup("Please select a car before proceeding.");
+        return;
+    } else {
+        hideNudgePopup();
+    }
+
     // If all validations pass, proceed with navigation
     navigate(submitType);
 }
+
 
 
 ////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%  
