@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function redirectToContactPage() {
   setTimeout(function () {
-    window.location.href = "contact.html";
+   // window.location.href = "contact.html";
 
     //add class after sometime for display none main
     // setTimeout(() => {

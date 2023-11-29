@@ -104,18 +104,21 @@ body {
     // backdrop-filter: blur(100px);
 
 
-    background: url(../assets/img/1bb.png), linear-gradient(135deg, #6a00df 7%, #370076 39%, #31006f 54%);
+    background: url(../assets/img/1bb.png), linear-gradient(135deg, #6b00e2 7%, #370076 39%, #330072 54%);
     //   background: #33026f ;
     background-position: 53% 100%;
     background-repeat: no-repeat;
     background-size: 500% 100%;
-    color: black;
+    color: #fff;
     font-size: 25px;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
     background-blend-mode: soft-light;
     backdrop-filter: blur(100px);
+    margin: 0;
+    padding: 0 24px;
+    
     //    transition: all 10s ease 10s;
 
 
@@ -508,4 +511,25 @@ a {
 .pcss-btn.pcss-disabled:hover,
 .pcss-btn:disabled:hover {
     box-shadow: none;
+}
+
+.commonBtn{
+    background: #e7b464;
+    border-radius: 8px;
+    color: #340073;
+    font-size: 16px;
+    padding: 12px 4px;
+    box-shadow: none;
+    outline: none;
+    font-family: 'GibsonSemibold';
+    min-width: 120px;
+    border: none;
+    &.deactiveBtn{
+        color: #808080;
+        background: #d9d9d9;
+    }
+    &.answerMore{
+        background: #ad88e5;
+        color: #f1edf9;
+    }
 }

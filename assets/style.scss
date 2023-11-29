@@ -23,7 +23,7 @@
     // Mobile css
     .mobile-container {
         display: none;
-        max-width: 768px;
+        max-width: 540px;
         margin: auto;
         padding: 20px;
 
@@ -86,21 +86,21 @@
     align-items: center;
 
   .rotating-text {
-    font-family: Lato, sans-serif;
+    font-family: DairyMilkFontMedium, sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
     color: white;
     transform: translateX(10px);
     display: flex;
     justify-content: center;
   .classForSpacing{
-    min-width: 160px;
+    min-width: 107px;
   }
     p {
       display: inline-flex;
       margin: 0;
       vertical-align: top;
-  margin-right: 5px;
+  margin-right: 8px;
       .word {
         position: absolute;
         display: flex;
@@ -179,7 +179,7 @@
                     }
 
                     .phoneWrap {
-                        transform: translate(70vw, 30vh) scale(0.4);
+                        transform: translate(60vw, 25vh) scale(0.4);
                         opacity: 1;
                         transition: transform 2s ease 4s, opacity 1s ease 5s;
                         left: -30vw;
