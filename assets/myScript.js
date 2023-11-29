@@ -130,6 +130,88 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
        }
      });
    });
+
+
+
+
+   
+   
+   
+   
+   //modal js
+ 
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the buttons that open the modals
+  var btn1 = document.getElementById("myBtn1");
+  var btn2 = document.getElementById("myBtn2");
+  var btn3 = document.getElementById("myBtn3");
+
+  // Get all modal content elements
+  var modalContents = document.querySelectorAll('.modal-content');
+
+  // When the user clicks the button, open the modal with the corresponding content
+  btn1.onclick = function() {
+    showModalWithContent('firstModal');
+  }
+
+  btn2.onclick = function() {
+    showModalWithContent('secondModal');
+  }
+
+  btn3.onclick = function() {
+    showModalWithContent('thirdModal');
+  }
+
+  // Function to show modal with the specified content
+  function showModalWithContent(contentClass) {
+    modalContents.forEach(function(modalContent) {
+      modalContent.style.display = 'none';
+    });
+
+    var selectedContent = document.querySelector('.' + contentClass);
+    if (selectedContent) {
+      selectedContent.style.display = 'block';
+      modal.style.display = "block";
+    }
+  }
+
+  // Get all close buttons
+  var closeButtons = document.getElementsByClassName("close");
+
+  // Iterate through close buttons and add click event listener
+  for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function() {
+      modal.style.display = "none";
+    }
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 }
 
    
