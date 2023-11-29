@@ -154,12 +154,30 @@
   border: 2px solid;
   border-color: #fff;
 }
-.mainPage.contactBody .mobile-container .progressBarWrapper ul li.done {
+.mainPage.contactBody .mobile-container .progressBarWrapper ul li.doneProg {
   background: #f3cb7f;
   border-color: #f3cb7f;
 }
-.mainPage.contactBody .mobile-container .progressBarWrapper ul li.active {
+.mainPage.contactBody .mobile-container .progressBarWrapper ul li.activeProg {
   border-color: #f3cb7f;
+}
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.hiddenCont {
+  display: none;
+}
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont {
+  display: block;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.hiddenCont {
+  display: none;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.activeCont {
+  display: block;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.hiddenCont {
+  display: none;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.activeCont {
+  display: block;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
@@ -535,6 +553,24 @@ header#nav #menuWrapper {
 .mainFooter.footerBg {
   background: #00000017;
   backdrop-filter: blur(10px);
+}
+.mainFooter .firstMainContBtn.btnBlockShow {
+  display: block;
+}
+.mainFooter .firstMainContBtn.btnBlockHide {
+  display: none;
+}
+.mainFooter .secondMainContBtn.btnBlockShow {
+  display: block;
+}
+.mainFooter .secondMainContBtn.btnBlockHide {
+  display: none;
+}
+.mainFooter .thirdMainContBtn.btnBlockShow {
+  display: block;
+}
+.mainFooter .thirdMainContBtn.btnBlockHide {
+  display: none;
 }
 
 .main_modal {

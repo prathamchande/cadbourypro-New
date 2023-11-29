@@ -138,7 +138,7 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
    
    
    
-   //modal js
+   //modal js/////////////
  
 
   // Get the modal
@@ -198,8 +198,7 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
 
 
 
-
-
+////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%
 
 
 
@@ -270,6 +269,67 @@ setInterval(rotateText, 4000);
 }
 
 /////////////////////////////////////////////////////////////////////////
+var currentContainerIndex = 0;
+var containerIds = ['firstMainContainerID', 'secondMainContainerID', 'thirdMainContainerID'];
+var progressBarIds = ['firstProgBar', 'secondProgBar', 'thirdProgBar'];
+var buttonIds = ['firstMainContBtnID', 'secondMainContBtnID', 'thirdMainContBtnID'];
+
+function navigate(submitType) {
+  var currentContainer = document.querySelector('.activeCont');
+  var currentButton = document.querySelector('.btnBlockShow');
+  var currentProgressBar = document.querySelector('.activeProg');
+
+  currentContainer.classList.remove('activeCont');
+  currentButton.classList.remove('btnBlockShow');
+  currentButton.classList.add('btnBlockHide');
+  currentContainer.classList.add('hiddenCont');
+
+  var nextContainerIndex;
+  if (submitType === 'firstSubmit') {
+    nextContainerIndex = (currentContainerIndex + 1) % containerIds.length;
+  } else if (submitType === 'secondSubmit') {
+    nextContainerIndex = (currentContainerIndex + 1) % containerIds.length;
+  } else if (submitType === 'thirdSubmit') {
+    nextContainerIndex = (currentContainerIndex + 1) % containerIds.length;
+  }
+
+  currentContainerIndex = nextContainerIndex;
+
+  var nextContainer = document.getElementById(containerIds[nextContainerIndex]);
+  var nextButton = document.getElementById(buttonIds[nextContainerIndex]);
+  var nextProgressBar = document.getElementById(progressBarIds[nextContainerIndex]);
+
+  nextContainer.classList.add('hiddenCont');
+
+  if (!nextContainer.classList.contains('activeCont')) {
+    nextContainer.classList.add('activeCont');
+  }
+
+  if (!nextButton.classList.contains('btnBlockShow')) {
+    nextButton.classList.add('btnBlockShow');
+  }
+
+  if (nextButton.classList.contains('btnBlockHide')) {
+    nextButton.classList.remove('btnBlockHide');
+  }
+
+  currentProgressBar.classList.remove('activeProg');
+  currentProgressBar.classList.add('doneProg');
+
+  nextProgressBar.classList.add('activeProg');
+
+  var allDone = Array.from(document.querySelectorAll('.progressBarWrapper li')).every(function (el) {
+    return el.classList.contains('doneProg');
+  });
+
+  if (allDone) {
+    Array.from(document.querySelectorAll('.progressBarWrapper li')).forEach(function (el) {
+      el.classList.remove('doneProg');
+      el.classList.remove('activeProg');
+    });
+    document.getElementById('firstProgBar').classList.add('activeProg');
+  }
+}
 
 /////////////////////////////////////////////////////////////////////////
 

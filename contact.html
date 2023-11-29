@@ -58,32 +58,60 @@
     <!-- Your mobile UI content goes here -->
     
   <!-- Pagination content -->
-    <div class="progressBarWrapper">
-      <ul>
-          <li class="done">
-             
-          </li>
-          <li class="active">
-             
-          </li>
-          <li>
-            
-          </li>
-          <li>
-              
-          </li>
-          <li>
-             
-          </li>
-          <li>
-             
-          </li>
-      </ul>
+
+  <div class="progressBarWrapper">
+    <ul>
+      <li id="firstProgBar" class="activeProg"></li>
+      <li id="secondProgBar"></li>
+      <li id="thirdProgBar"></li>
+    </ul>
   </div>
+
 
 
 <!-- middle main content here -->
 <div class="middleContent">
+
+  <div id="firstMainContainerID" class="firstMainContainer activeCont">
+    Hello world first
+  </div>
+  <div id="secondMainContainerID" class="secondMainContainer hiddenCont">
+    Hello world second
+  </div>
+  <div id="thirdMainContainerID" class="thirdMainContainer hiddenCont">
+    Hello world third
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Trigger/Open The Modal -->
 <button id="myBtn1">Open Modal</button>
@@ -130,10 +158,22 @@
 
 
 <!-- footer content -->
-  <div id="footerId" class="mainFooter">
-    <button class="commonBtn" onclick="navigate('info')">info</button>
-  
+<div id="footerId" class="mainFooter">
+  <div id="firstMainContBtnID" class="firstMainContBtn btnBlockShow">
+    <button class="commonBtn" onclick="navigate('firstSubmit')">Go Second</button>
   </div>
+  <div id="secondMainContBtnID" class="secondMainContBtn btnBlockHide">
+    <button class="commonBtn" onclick="navigate('secondSubmit')">Go Third</button>
+  </div>
+  <div id="thirdMainContBtnID" class="thirdMainContBtn btnBlockHide">
+    <button class="commonBtn" onclick="navigate('thirdSubmit')">Go First</button>
+  </div>
+</div>
+
+
+
+
+
   </div>
 <!-- mobile-container END here -->
 

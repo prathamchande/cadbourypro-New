@@ -241,16 +241,59 @@
                         border: 2px solid;
                         border-color: #fff;
     
-    &.done{
+    &.doneProg{
         background: #f3cb7f;
         border-color: #f3cb7f;
     }
-    &.active{
+    &.activeProg{
         border-color: #f3cb7f;
     }
                     }
                 }
             }
+
+
+            .middleContent{
+                .firstMainContainer{
+                    
+                   &.hiddenCont{
+                    display: none;
+                   } 
+                    &.activeCont{
+                        display: block;
+                    }
+                }
+.secondMainContainer{
+    &.hiddenCont{
+        display: none;
+       } 
+        &.activeCont{
+            display: block;
+        }
+}
+.thirdMainContainer{
+    &.hiddenCont{
+        display: none;
+       } 
+        &.activeCont{
+            display: block;
+        }
+}
+
+
+
+
+            }
+
+// middle content end here
+
+
+
+
+
+
+            
+
         }
 
         //css for animation/transition after loaded class add
@@ -797,6 +840,31 @@ header#nav {
     &.footerBg{
         background: #00000017;
         backdrop-filter: blur(10px);
+    }
+
+    .firstMainContBtn{
+        &.btnBlockShow{
+            display: block;
+        }
+        &.btnBlockHide{
+            display: none;
+        }
+    }
+    .secondMainContBtn{
+        &.btnBlockShow{
+            display: block;
+        }
+        &.btnBlockHide{
+            display: none;
+        }
+    }
+    .thirdMainContBtn{
+        &.btnBlockShow{
+            display: block;
+        }
+        &.btnBlockHide{
+            display: none;
+        }
     }
 }
 
