@@ -201,46 +201,61 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
 
 
   //Validations for input
-  function showNudgePopup(nudgeId) {
-    var nudgePopup = document.getElementById(nudgeId);
-    nudgePopup.style.display = "block";
+  function showNudgePopup(message) {
+    var nudgePopup = document.getElementById('nudgePopup');
+    nudgePopup.textContent = message;
+    nudgePopup.style.display = 'block';
 
     // Hide nudge popup after 3 seconds
     setTimeout(function () {
-      nudgePopup.style.display = "none";
+      nudgePopup.style.display = 'none';
     }, 3000);
-  }
+}
 
-  function hideNudgePopup(nudgeId) {
-    var nudgePopup = document.getElementById(nudgeId);
-    nudgePopup.style.display = "none";
-  }
+function hideNudgePopup() {
+    var nudgePopup = document.getElementById('nudgePopup');
+    nudgePopup.style.display = 'none';
+}
 
-  function validateAndNavigate(submitType) {
-    var usernameInput = document.getElementById("username");
-    var mobileNumberInput = document.getElementById("mobileNumber");
+function validateAndNavigate(submitType) {
+    var usernameInput = document.getElementById('username');
+    var mobileNumberInput = document.getElementById('mobileNumber');
+    var vehicle1Checkbox = document.getElementById('vehicle1');
+    var vehicle2Checkbox = document.getElementById('vehicle2');
 
     // Validate username
-    if (/[^a-zA-Z]/.test(usernameInput.value)) {
-      document.getElementById("usernameNudge").textContent = "You are not allowed numbers or special characters in the username.";
-      showNudgePopup("usernameNudge");
-      return;
+    if (!usernameInput.value) {
+        showNudgePopup("Username cannot be empty.");
+        return;
+    } else if (/[^a-zA-Z]/.test(usernameInput.value)) {
+        showNudgePopup("You are not allowed numbers or special characters in the username.");
+        return;
     } else {
-      hideNudgePopup("usernameNudge");
+        hideNudgePopup();
     }
 
     // Validate mobile number
-    if (!/^\d+$/.test(mobileNumberInput.value)) {
-      document.getElementById("mobileNumberNudge").textContent = "You are not allowed any characters in the mobile number.";
-      showNudgePopup("mobileNumberNudge");
-      return;
+    if (!mobileNumberInput.value) {
+        showNudgePopup("Mobile number cannot be empty.");
+        return;
+    } else if (!/^\d+$/.test(mobileNumberInput.value)) {
+        showNudgePopup("You are not allowed any characters in the mobile number.");
+        return;
     } else {
-      hideNudgePopup("mobileNumberNudge");
+        hideNudgePopup();
+    }
+
+    // Check if both checkboxes are checked
+    if (!vehicle1Checkbox.checked || !vehicle2Checkbox.checked) {
+        showNudgePopup("Please check both checkboxes before proceeding.");
+        return;
+    } else {
+        hideNudgePopup();
     }
 
     // If all validations pass, proceed with navigation
     navigate(submitType);
-  }
+}
 
 
 ////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%  
