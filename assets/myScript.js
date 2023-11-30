@@ -1,22 +1,4 @@
-// Check if the user is accessing from a mobile device
-// function isMobile() {
-//   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-//     navigator.userAgent
-//   );
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const mobileContainer = document.querySelector(".mobile-container");
-//   const desktopMessage = document.querySelector(".desktop-message");
-
-//   if (isMobile()) {
-//       desktopMessage.style.display = "none";
-//     mobileContainer.style.display = "block";
-//   } else {
-//       mobileContainer.style.display = "none";
-//     desktopMessage.style.display = "block";
-//   }
-// });
+// Check if the user is accessing from a mobile portrait device
 
 document.addEventListener("DOMContentLoaded", function () {
     const mobileContainer = document.querySelector(".mobile-container");
@@ -58,11 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+  //for otp input validation
 let digitValidate = function(ele){
     console.log(ele.value);
     ele.value = ele.value.replace(/[^0-9]/g,'');
 }
 
+//otp input tab change
 let tabChange = function(val){
     let ele = document.querySelectorAll('.otpInput');
     
@@ -130,34 +115,7 @@ function redirectToContactPage() {
     }
   });
   
-  /////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     setTimeout(() => {
-//         window.location.href = "login.html";
-//     }, 3000000); // Navigate to the next page after 30 seconds
-// });
-
-// function stopAnimations() {
-//     const animationImages = document.querySelectorAll('.animationImages');
-//     animationImages.forEach(image => {
-//         image.style.animation = 'none';
-//     });
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     setTimeout(() => {
-//         document.querySelector('.birthdayLogo').classList.add('finalState');
-//         document.querySelector('.gut').classList.add('finalState');
-//         document.querySelector('.mus').classList.add('finalState');
-//         document.querySelector('.pon').classList.add('finalState');
-//         window.location.href = "login.html";
-//     }, 3000000); // Navigate to the next page after 30 seconds
-// });
 /////////////////////////////////////////////////////////////////////////
 //header script
 if (window.location.pathname.endsWith("contact.html")) {
@@ -197,9 +155,8 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
 
    
    
-   
-   
-   //modal js/////////////
+/////////////////////////////////////////////////////////////////////////
+//modal js/////////////
  
 
   // Get the modal
@@ -263,10 +220,10 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
 
 
 
+/////////////////////////////////////////////////////////////////////////
 
-
-  //Validations for input
-  function showNudgePopup(message) {
+// inputNudg error msgjs 
+function showNudgePopup(message) {
     var nudgePopup = document.getElementById('nudgePopup');
     nudgePopup.textContent = message;
     nudgePopup.style.display = 'block';
@@ -283,7 +240,9 @@ function hideNudgePopup() {
 }
 
 
+/////////////////////////////////////////////////////////////////////////
 
+//otp validation
 function validateOtpAndNavigate() {
     var otpInputs = document.querySelectorAll('.otpInput');
     var otpNudgeAlert = document.getElementById('alertOtpValidationID');
@@ -311,7 +270,7 @@ function validateOtpAndNavigate() {
 
 
 
-
+// forms validations
 function validateAndNavigate(submitType) {
     var usernameInput = document.getElementById('username');
     var mobileNumberInput = document.getElementById('mobileNumber');
@@ -319,7 +278,7 @@ function validateAndNavigate(submitType) {
     var vehicle2Checkbox = document.getElementById('vehicle2');
     var selectedCar = document.getElementById('cars');
 
-
+// username mobile number opt validation on first submit button
     if (submitType === 'firstSubmit') {
     // Validate username
     if (!usernameInput.value) {
@@ -372,7 +331,10 @@ function validateAndNavigate(submitType) {
 
 
 
-////impAll middle content handling here=====---------============%%%%%%%%%%%%%%%%  
+/////////////////////////////////////////////////////////////////////////
+
+
+//impAll middle content handling here=%%%%%%%%%%%%%%%%  
 var currentContainerIndex = 0;
 var containerIds = ['firstMainContainerID', 'secondMainContainerID', 'thirdMainContainerID'];
 var progressBarIds = ['firstProgBar', 'secondProgBar', 'thirdProgBar'];
@@ -441,16 +403,7 @@ function navigate(submitType) {
 
 
 
-
-
-
-
-
-
-
-
-
-   
+//navigate function end here  
 }
 
    
