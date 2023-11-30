@@ -1,22 +1,62 @@
 // Check if the user is accessing from a mobile device
-function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
+// function isMobile() {
+//   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+//     navigator.userAgent
+//   );
+// }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const mobileContainer = document.querySelector(".mobile-container");
+//   const desktopMessage = document.querySelector(".desktop-message");
+
+//   if (isMobile()) {
+//       desktopMessage.style.display = "none";
+//     mobileContainer.style.display = "block";
+//   } else {
+//       mobileContainer.style.display = "none";
+//     desktopMessage.style.display = "block";
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const mobileContainer = document.querySelector(".mobile-container");
-  const desktopMessage = document.querySelector(".desktop-message");
+    const mobileContainer = document.querySelector(".mobile-container");
+    const desktopMessage = document.querySelector(".desktop-message");
 
-  if (isMobile()) {
-    mobileContainer.style.display = "block";
-  } else {
-    desktopMessage.style.display = "block";
-  }
-});
+    function updateDisplay() {
+      console.log("Window width:", window.innerWidth);
+      console.log("Window height:", window.innerHeight);
 
+      if (isMobile()) {
+        console.log("Switching to mobile view.");
+        desktopMessage.style.display = "none";
+        mobileContainer.style.display = "block";
+      } else {
+        console.log("Switching to desktop view.");
+        mobileContainer.style.display = "none";
+        desktopMessage.style.display = "block";
+      }
+    }
 
+    // Initial display check
+    updateDisplay();
+
+    // Update display on window resize
+    window.addEventListener("resize", function () {
+      console.log("Window resized.");
+      updateDisplay();
+    });
+
+    function isMobile() {
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      return (
+        windowWidth <= 640 || // Width less than or equal to 640 pixels
+        (windowWidth < windowHeight && windowHeight <= 640) // Portrait mode with height less than or equal to 640 pixels
+        // || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      );
+    }
+  });
 
 let digitValidate = function(ele){
     console.log(ele.value);

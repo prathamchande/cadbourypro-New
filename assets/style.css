@@ -1,11 +1,17 @@
 .mainPage .desktop-message {
   display: none;
+  padding: 40px;
   text-align: center;
-  padding: 20px;
-  background-color: #e74c3c;
+  background-color: #e7b464;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  position: absolute;
+  font-family: "DairyMilkFontMedium";
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 16px;
 }
 .mainPage .mobile-container {
   display: none;
