@@ -139,6 +139,8 @@
   transition: color 10s ease;
 }
 .mainPage.contactBody .mobile-container .progressBarWrapper {
+  max-width: 360px;
+  margin: auto;
   padding: 40px;
   padding-bottom: 0;
 }
@@ -169,6 +171,16 @@
   border-color: #f3cb7f;
   transition: border-color 1s ease;
 }
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer,
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer {
+  max-width: 360px;
+  margin: auto;
+}
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer.hiddenCont,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer.hiddenCont,
 .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.hiddenCont,
@@ -178,6 +190,7 @@
 .mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.hiddenCont {
   display: none;
   opacity: 0;
+  transition: transform 10s ease, opacity 2s ease;
 }
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer.activeCont,
@@ -188,7 +201,18 @@
 .mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.activeCont {
   display: block;
   opacity: 1;
-  transition: opacity 2s ease;
+  transition: all 1s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap {
+  width: 0px;
+  max-width: 360px;
+  margin: auto;
+}
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont .imgWallpaperWrap {
+  width: 3500px;
+  max-width: 360px;
+  margin: auto;
+  transition: all 10s ease 10s;
 }
 .mainPage.infoBody .mobile-container {
   display: block;

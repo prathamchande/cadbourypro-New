@@ -230,6 +230,8 @@
             }
 
             .progressBarWrapper {
+                max-width: 360px;
+                margin: auto;
                 padding: 40px;
                 padding-bottom: 0;
 
@@ -278,18 +280,40 @@
                 .fifthMainContainer,
                 .sixthMainContainer,
                 .seventhMainContainer {
+                    max-width: 360px;
+                    margin: auto;
                     &.hiddenCont {
                         display: none;
                         opacity: 0;
+                        transition: transform 10s ease, opacity 2s ease;
+
                     }
 
                     &.activeCont {
                         display: block;
                         opacity: 1;
-                        transition: opacity 2s ease;
+                        transition: all 1s ease;
                     }
                 }
 
+             .firstMainContainer{
+                .imgWallpaperWrap{
+                    width: 0px;
+                    max-width: 360px;
+                    margin: auto;
+                  
+                }
+                &.activeCont {
+                    .imgWallpaperWrap{
+                        width: 3500px;
+                        max-width: 360px;
+                        margin: auto;
+                        transition: all 10s ease 10s;
+                      
+                    }
+                }
+               
+             }
 
 
 

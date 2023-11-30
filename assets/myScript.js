@@ -114,7 +114,7 @@ function redirectToContactPage() {
     // setTimeout(() => {
     //     document.querySelector('.mainWallpaper').classList.add('dsNone');
     //         }, 100);
-  }, 10000); // 10000 milliseconds = 10 seconds
+  }, 20000); // 10000 milliseconds = 10 seconds
 }
 
 // Function to redirect to info.html
@@ -402,6 +402,7 @@ if (window.location.pathname.endsWith("contact.html")) {
     nextContainer.classList.add("hiddenCont");
 
     if (!nextContainer.classList.contains("activeCont")) {
+        
       nextContainer.classList.add("activeCont");
     }
 
@@ -437,7 +438,7 @@ if (window.location.pathname.endsWith("contact.html")) {
 
   //navigate function end here
 }
-
+//contact.html js end here
 /////////////////////////////////////////////////////////////////////////
 
 //text rotation

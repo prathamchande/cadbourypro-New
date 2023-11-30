@@ -99,7 +99,7 @@ html {
 }
 
 body {
-  background: url(../assets/img/1bb.png), linear-gradient(135deg, #6b00e2 7%, #370076 39%, #330072 54%);
+  background: url(../assets/img/1bb.png), linear-gradient(135deg, #6b00e2 7%, #370076 39%, #330072 54%), #14111738;
   background-position: 53% 100%;
   background-repeat: no-repeat;
   background-size: 500% 100%;
