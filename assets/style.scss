@@ -254,10 +254,13 @@
                         &.doneProg {
                             background: #f3cb7f;
                             border-color: #f3cb7f;
+                            transition: background 2s ease, border-color 1s ease;
                         }
 
                         &.activeProg {
                             border-color: #f3cb7f;
+                            transition:  border-color 1s ease;
+
                         }
                     }
                 }
@@ -277,10 +280,13 @@
                 .seventhMainContainer {
                     &.hiddenCont {
                         display: none;
+                        opacity: 0;
                     }
 
                     &.activeCont {
                         display: block;
+                        opacity: 1;
+                        transition: opacity 2s ease;
                     }
                 }
 
@@ -810,10 +816,14 @@ header#nav {
     .seventhMainContBtn {
         &.btnBlockShow {
             display: block;
+            opacity: 1;
+            transition: opacity 1s ease;
         }
 
         &.btnBlockHide {
             display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
         }
     }
 

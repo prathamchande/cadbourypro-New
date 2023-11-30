@@ -163,9 +163,11 @@
 .mainPage.contactBody .mobile-container .progressBarWrapper ul li.doneProg {
   background: #f3cb7f;
   border-color: #f3cb7f;
+  transition: background 2s ease, border-color 1s ease;
 }
 .mainPage.contactBody .mobile-container .progressBarWrapper ul li.activeProg {
   border-color: #f3cb7f;
+  transition: border-color 1s ease;
 }
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer.hiddenCont,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer.hiddenCont,
@@ -175,6 +177,7 @@
 .mainPage.contactBody .mobile-container .middleContent .sixthMainContainer.hiddenCont,
 .mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.hiddenCont {
   display: none;
+  opacity: 0;
 }
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer.activeCont,
@@ -184,6 +187,8 @@
 .mainPage.contactBody .mobile-container .middleContent .sixthMainContainer.activeCont,
 .mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.activeCont {
   display: block;
+  opacity: 1;
+  transition: opacity 2s ease;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
@@ -561,6 +566,8 @@ header#nav #menuWrapper {
 .mainFooter .sixthMainContBtn.btnBlockShow,
 .mainFooter .seventhMainContBtn.btnBlockShow {
   display: block;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 .mainFooter .firstMainContBtn.btnBlockHide,
 .mainFooter .secondMainContBtn.btnBlockHide,
@@ -570,6 +577,8 @@ header#nav #menuWrapper {
 .mainFooter .sixthMainContBtn.btnBlockHide,
 .mainFooter .seventhMainContBtn.btnBlockHide {
   display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .main_modal {
