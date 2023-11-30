@@ -142,7 +142,17 @@
   <!-- Modal content firstModal -->
   <div class="modal-content firstModal">
     <span class="close">&times;</span>
-    <p>You are good man</p>
+    <div class="container">
+      <div id="alertOtpValidationID" class="alertOtpValidation" style="display: none;">Invalid OTP. Please try again.</div>
+      <form action="" class="formOtp">
+        <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
+        <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
+        <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
+        <input class="otpInput" type="text" oninput='digitValidate(this)'onkeyup='tabChange(4)' maxlength=1 >
+      </form>
+      <button class="commonBtn" onclick="validateOtpAndNavigate()">Verify OTP</button>
+  
+    </div>
   </div>
 
   <!-- Modal content secondModal -->

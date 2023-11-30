@@ -614,4 +614,11 @@ header#nav #menuWrapper {
   cursor: pointer;
 }
 
+form input {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

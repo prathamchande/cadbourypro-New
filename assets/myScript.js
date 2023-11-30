@@ -16,6 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+
+let digitValidate = function(ele){
+    console.log(ele.value);
+    ele.value = ele.value.replace(/[^0-9]/g,'');
+}
+
+let tabChange = function(val){
+    let ele = document.querySelectorAll('.otpInput');
+    
+    // Check if the current input element exists
+    if (ele[val]) {
+        if(ele[val-1].value != ''){
+            ele[val].focus();
+        } else if(ele[val-1].value == '' && ele[val-2]) {
+            ele[val-2].focus();
+        }
+    }
+}
+
+
 /////////////////////////////////////////////////////////////////////////
 
 // Navigation code
@@ -165,6 +186,10 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
     showModalWithContent('thirdModal');
   }
 
+  function hideModal() {
+    modal.style.display = "none";
+  }
+
   // Function to show modal with the specified content
   function showModalWithContent(contentClass) {
     modalContents.forEach(function(modalContent) {
@@ -189,11 +214,11 @@ document.getElementById("hamburger").addEventListener("click", function(event) {
   }
 
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   }
 
 
 
@@ -217,6 +242,36 @@ function hideNudgePopup() {
     nudgePopup.style.display = 'none';
 }
 
+
+
+function validateOtpAndNavigate() {
+    var otpInputs = document.querySelectorAll('.otpInput');
+    var otpNudgeAlert = document.getElementById('alertOtpValidationID');
+
+    var otp = "";
+    
+    otpInputs.forEach(function(input) {
+        otp += input.value;
+    });
+
+    // Validate the OTP (you can replace this with your actual validation logic)
+    if (otp === '1234') {
+        hideModal(); // Function to hide the modal
+        navigate('secondSubmit');
+    } else {
+        // Show the alert
+    otpNudgeAlert.style.display = 'block';
+
+    // Hide the alert after 3 seconds
+    setTimeout(function() {
+        otpNudgeAlert.style.display = 'none';
+    }, 3000);
+    }
+}
+
+
+
+
 function validateAndNavigate(submitType) {
     var usernameInput = document.getElementById('username');
     var mobileNumberInput = document.getElementById('mobileNumber');
@@ -224,6 +279,8 @@ function validateAndNavigate(submitType) {
     var vehicle2Checkbox = document.getElementById('vehicle2');
     var selectedCar = document.getElementById('cars');
 
+
+    if (submitType === 'firstSubmit') {
     // Validate username
     if (!usernameInput.value) {
         showNudgePopup("Username cannot be empty.");
@@ -252,6 +309,13 @@ function validateAndNavigate(submitType) {
         return;
     } else {
         hideNudgePopup();
+    }
+
+        // Check if any of the fields are filled
+        if (mobileNumberInput.value || usernameInput.value || vehicle1Checkbox.checked || vehicle2Checkbox.checked) {
+            showModalWithContent('firstModal');
+            return;
+        }
     }
 
     // Validate selected car only when moving from the second to the third block
