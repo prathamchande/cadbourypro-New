@@ -265,28 +265,16 @@
 
 
             .middleContent {
-                .firstMainContainer {
 
-                    &.hiddenCont {
-                        display: none;
-                    }
 
-                    &.activeCont {
-                        display: block;
-                    }
-                }
 
-                .secondMainContainer {
-                    &.hiddenCont {
-                        display: none;
-                    }
-
-                    &.activeCont {
-                        display: block;
-                    }
-                }
-
-                .thirdMainContainer {
+                .firstMainContainer,
+                .secondMainContainer,
+                .thirdMainContainer,
+                .fourthMainContainer,
+                .fifthMainContainer,
+                .sixthMainContainer,
+                .seventhMainContainer {
                     &.hiddenCont {
                         display: none;
                     }
@@ -813,7 +801,13 @@ header#nav {
         backdrop-filter: blur(10px);
     }
 
-    .firstMainContBtn {
+    .firstMainContBtn,
+    .secondMainContBtn,
+    .thirdMainContBtn,
+    .fourthMainContBtn,
+    .fifthMainContBtn,
+    .sixthMainContBtn,
+    .seventhMainContBtn {
         &.btnBlockShow {
             display: block;
         }
@@ -823,25 +817,7 @@ header#nav {
         }
     }
 
-    .secondMainContBtn {
-        &.btnBlockShow {
-            display: block;
-        }
 
-        &.btnBlockHide {
-            display: none;
-        }
-    }
-
-    .thirdMainContBtn {
-        &.btnBlockShow {
-            display: block;
-        }
-
-        &.btnBlockHide {
-            display: none;
-        }
-    }
 }
 
 

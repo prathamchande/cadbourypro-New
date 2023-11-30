@@ -9,7 +9,7 @@
 .nudge-popup {
     display: none;
     /* Add any additional styles for the nudge popup */
-  }
+}
 
 
 
@@ -58,45 +58,53 @@
 
 
 .text1,
-.fSmiBold{
+.fSmiBold {
     font-family: GibsonSemibold;
 }
-.fReg{
+
+.fReg {
     font-family: GibsonRegular;
 }
-.fLight{
+
+.fLight {
     font-family: GibsonLight;
 }
-.fIta{
+
+.fIta {
     font-family: GibsonItalic;
 }
 
 
-.fBold{
+.fBold {
     font-family: GibsonBold;
 }
-.fGib{
+
+.fGib {
     font-family: Gibson;
 }
-.fDairy{
+
+.fDairy {
     font-family: DairyMilkFontMedium;
 }
 
 
-.fontWhite{
+.fontWhite {
     color: #fff;
 }
-.fontBlue{
+
+.fontBlue {
     color: #340073;
 }
-.fontGary{
+
+.fontGary {
     color: #808080;
 }
 
-.bgYellow{
+.bgYellow {
     background: #e7b464;
 }
-.bgBlue{
+
+.bgBlue {
     background: #340073;
 }
 
@@ -536,7 +544,7 @@ a {
     box-shadow: none;
 }
 
-.commonBtn{
+.commonBtn {
     background: #e7b464;
     border-radius: 8px;
     color: #340073;
@@ -547,11 +555,13 @@ a {
     font-family: 'GibsonSemibold';
     min-width: 120px;
     border: none;
-    &.deactiveBtn{
+
+    &.deactiveBtn {
         color: #808080;
         background: #d9d9d9;
     }
-    &.answerMore{
+
+    &.answerMore {
         background: #ad88e5;
         color: #f1edf9;
     }

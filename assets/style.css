@@ -167,22 +167,22 @@
 .mainPage.contactBody .mobile-container .progressBarWrapper ul li.activeProg {
   border-color: #f3cb7f;
 }
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.hiddenCont {
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer.hiddenCont,
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.hiddenCont {
   display: none;
 }
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont {
-  display: block;
-}
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.hiddenCont {
-  display: none;
-}
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.activeCont {
-  display: block;
-}
-.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.hiddenCont {
-  display: none;
-}
-.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.activeCont {
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer.activeCont,
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer.activeCont {
   display: block;
 }
 .mainPage.infoBody .mobile-container {
@@ -553,22 +553,22 @@ header#nav #menuWrapper {
   background: #00000017;
   backdrop-filter: blur(10px);
 }
-.mainFooter .firstMainContBtn.btnBlockShow {
+.mainFooter .firstMainContBtn.btnBlockShow,
+.mainFooter .secondMainContBtn.btnBlockShow,
+.mainFooter .thirdMainContBtn.btnBlockShow,
+.mainFooter .fourthMainContBtn.btnBlockShow,
+.mainFooter .fifthMainContBtn.btnBlockShow,
+.mainFooter .sixthMainContBtn.btnBlockShow,
+.mainFooter .seventhMainContBtn.btnBlockShow {
   display: block;
 }
-.mainFooter .firstMainContBtn.btnBlockHide {
-  display: none;
-}
-.mainFooter .secondMainContBtn.btnBlockShow {
-  display: block;
-}
-.mainFooter .secondMainContBtn.btnBlockHide {
-  display: none;
-}
-.mainFooter .thirdMainContBtn.btnBlockShow {
-  display: block;
-}
-.mainFooter .thirdMainContBtn.btnBlockHide {
+.mainFooter .firstMainContBtn.btnBlockHide,
+.mainFooter .secondMainContBtn.btnBlockHide,
+.mainFooter .thirdMainContBtn.btnBlockHide,
+.mainFooter .fourthMainContBtn.btnBlockHide,
+.mainFooter .fifthMainContBtn.btnBlockHide,
+.mainFooter .sixthMainContBtn.btnBlockHide,
+.mainFooter .seventhMainContBtn.btnBlockHide {
   display: none;
 }
 
