@@ -114,7 +114,7 @@ function redirectToContactPage() {
     // setTimeout(() => {
     //     document.querySelector('.mainWallpaper').classList.add('dsNone');
     //         }, 100);
-  }, 20000); // 10000 milliseconds = 10 seconds
+  }, 10000); // 10000 milliseconds = 10 seconds
 }
 
 // Function to redirect to info.html
@@ -401,6 +401,34 @@ if (window.location.pathname.endsWith("contact.html")) {
 
     nextContainer.classList.add("hiddenCont");
 
+      // Reload the page before navigating to the next container if coming from seventh
+  if (submitType === "seventhSubmit") {
+   // window.location.reload();
+   window.location.href = "index.html";
+    return; // Stop further execution
+  }
+    var childElementsFirst = nextContainer.querySelectorAll(".imgWallpaperWrap");
+    var childElementsSecond = nextContainer.querySelectorAll(".bgWll");
+    var childElementsThird = nextContainer.querySelectorAll(".bagWall");
+    
+    applyClassToChildElements(childElementsFirst, "animate");
+    applyClassToChildElements(childElementsSecond, "now");
+    applyClassToChildElements(childElementsThird, "check");
+    
+    function applyClassToChildElements(childElements, className) {
+      if (!childElements || childElements.length === 0) {
+        console.warn("No matching elements found.");
+        return;
+      }
+    
+      childElements.forEach(function (childElement) {
+        setTimeout(() => {
+            childElement.classList.toggle(className);
+          }, 100);
+       
+      });
+    }
+
     if (!nextContainer.classList.contains("activeCont")) {
         
       nextContainer.classList.add("activeCont");
@@ -493,7 +521,10 @@ if (window.location.pathname.endsWith("index.html")) {
 }
 
 /////////////////////////////////////////////////////////////////////////
-
+//testing purpose
+function navForIndex() {
+    window.location.href = "index.html";
+}
 /////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////

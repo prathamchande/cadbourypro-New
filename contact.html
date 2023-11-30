@@ -71,14 +71,14 @@
       </ul>
     </div>
 
-
+    
 
     <!-- middle main content here -->
     <div class="middleContent">
       <div id="nudgePopup" class="nudge-popup"> </div>
       <div id="firstMainContainerID" class="firstMainContainer activeCont">
 
-        <div class="imgWallpaperWrap">
+        <div class="imgWallpaperWrap animate" onclick="navForIndex()">
           <img src="assets/img/wallpaper.png" alt="">
         </div>
 
@@ -108,6 +108,10 @@
         </select>
       </div>
       <div id="thirdMainContainerID" class="thirdMainContainer hiddenCont">
+        <div class="imgWallpaperWrap">
+          <img src="assets/img/wallpaper.png" alt="">
+        </div>
+        <div class="bgWll">ppc</div>
         Hello world third (how old & male female)
       </div>
 
@@ -210,7 +214,7 @@
 
 
     <!-- footer content -->
-    <div id="footerId" class="mainFooter">
+    <div id="footerId" class="mainFooter footerBg">
       <div id="firstMainContBtnID" class="firstMainContBtn btnBlockShow">
         <button class="commonBtn" onclick="validateAndNavigate('firstSubmit')">Go Second</button>
       </div>

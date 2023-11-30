@@ -295,23 +295,21 @@
                         transition: all 1s ease;
                     }
                 }
-
+                .secondMainContainer,
+                .thirdMainContainer,
              .firstMainContainer{
                 .imgWallpaperWrap{
-                    width: 0px;
+                    opacity: 0;
                     max-width: 360px;
                     margin: auto;
-                  
-                }
-                &.activeCont {
-                    .imgWallpaperWrap{
-                        width: 3500px;
+                    &.animate{
+                        opacity: 1;
                         max-width: 360px;
                         margin: auto;
-                        transition: all 10s ease 10s;
-                      
+                        transition: all 10s ease;
                     }
                 }
+              
                
              }
 

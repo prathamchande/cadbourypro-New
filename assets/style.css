@@ -203,16 +203,20 @@
   opacity: 1;
   transition: all 1s ease;
 }
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap,
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap {
-  width: 0px;
+  opacity: 0;
   max-width: 360px;
   margin: auto;
 }
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer.activeCont .imgWallpaperWrap {
-  width: 3500px;
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap.animate,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap.animate,
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap.animate {
+  opacity: 1;
   max-width: 360px;
   margin: auto;
-  transition: all 10s ease 10s;
+  transition: all 10s ease;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
