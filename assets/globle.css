@@ -81,6 +81,10 @@
   background: #e7b464;
 }
 
+.bgBlue {
+  background: #340073;
+}
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
