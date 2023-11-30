@@ -16,13 +16,13 @@
         font-weight: bold;
         position: absolute;
         font-family: 'DairyMilkFontMedium';
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 16px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 16px;
     }
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     // Mobile css for common all pages
     .mobile-container {
@@ -30,6 +30,7 @@
         // max-width: 540px;
         margin-top: 70px;
         padding: 0 24px;
+
         .blurView {
             // position: absolute;
             // background: #8c2ef600;
@@ -212,7 +213,7 @@
 
 
 
-   //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     //contactBody page
     &.contactBody {
@@ -221,16 +222,18 @@
             display: block;
             max-height: calc(100vh - 70px);
             overflow: scroll;
+
             h1 {
                 color: green;
                 transition: color 10s ease;
 
             }
 
-            .progressBarWrapper{
+            .progressBarWrapper {
                 padding: 40px;
                 padding-bottom: 0;
-                ul{
+
+                ul {
                     display: flex;
                     justify-content: space-between;
                     margin-block-start: 0;
@@ -238,7 +241,8 @@
                     margin-inline-start: 0px;
                     margin-inline-end: 0px;
                     padding-inline-start: 0;
-                    li{
+
+                    li {
                         width: 14px;
                         height: 14px;
                         background: none;
@@ -246,67 +250,71 @@
                         list-style: none;
                         border: 2px solid;
                         border-color: #fff;
-    
-    &.doneProg{
-        background: #f3cb7f;
-        border-color: #f3cb7f;
-    }
-    &.activeProg{
-        border-color: #f3cb7f;
-    }
+
+                        &.doneProg {
+                            background: #f3cb7f;
+                            border-color: #f3cb7f;
+                        }
+
+                        &.activeProg {
+                            border-color: #f3cb7f;
+                        }
                     }
                 }
             }
 
 
-            .middleContent{
-                .firstMainContainer{
-                    
-                   &.hiddenCont{
-                    display: none;
-                   } 
-                    &.activeCont{
+            .middleContent {
+                .firstMainContainer {
+
+                    &.hiddenCont {
+                        display: none;
+                    }
+
+                    &.activeCont {
                         display: block;
                     }
                 }
-.secondMainContainer{
-    &.hiddenCont{
-        display: none;
-       } 
-        &.activeCont{
-            display: block;
-        }
-}
-.thirdMainContainer{
-    &.hiddenCont{
-        display: none;
-       } 
-        &.activeCont{
-            display: block;
-        }
-}
+
+                .secondMainContainer {
+                    &.hiddenCont {
+                        display: none;
+                    }
+
+                    &.activeCont {
+                        display: block;
+                    }
+                }
+
+                .thirdMainContainer {
+                    &.hiddenCont {
+                        display: none;
+                    }
+
+                    &.activeCont {
+                        display: block;
+                    }
+                }
 
 
 
 
             }
 
-// middle content end here
+            // middle content end here
 
 
 
 
 
 
-            
+
 
         }
 
         //css for animation/transition after loaded class add
         &.loaded {
-            .mobile-container {
-
-            }
+            .mobile-container {}
         }
     }
 
@@ -320,6 +328,7 @@
             display: block;
             max-height: calc(100vh - 70px);
             overflow: scroll;
+
             h1 {
                 color: yellow;
             }
@@ -327,7 +336,7 @@
     }
 
 
-        //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     //designSystem page
     &.designSystem {
@@ -335,6 +344,7 @@
             display: block;
             max-height: calc(100vh - 70px);
             overflow: scroll;
+
             h1 {
                 color: yellow;
             }
@@ -347,27 +357,9 @@
 
 
 
-
-
-
-
-//animation for bg rotaion main page
-
-// @keyframes bgrotationBox {
-//     0%   { transform: rotate3d(1, 1, 1, 240deg)}
-//     50%  { transform: rotate3d(1, 1, 1, 270deg)}
-//     100% { transform: rotate3d(1, 1, 1, 360deg)}
-//   }
-
-
-
-
-
 //%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Start Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-//css for background bubble
-
-
+//css for background bubble animations
 
 #background-wrap {
     bottom: 0;
@@ -376,7 +368,101 @@
     right: 0;
     top: 0;
     z-index: -1;
+
+
+    /* OBJECTS */
+
+    .bubble {
+        opacity: 0.05;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+        height: 200px;
+        position: absolute;
+        width: 200px;
+
+        &:after {
+            background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
+            /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            /* IE10+ */
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+
+            -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+            -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+            content: "";
+            height: 180px;
+            left: 10px;
+            position: absolute;
+            width: 180px;
+        }
+
+        &.x1 {
+            -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            left: -5%;
+            top: 5%;
+            -webkit-transform: scale(0.6);
+            -moz-transform: scale(0.6);
+            transform: scale(0.6);
+        }
+
+        &.x2 {
+            -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            left: 5%;
+            top: 80%;
+            -webkit-transform: scale(0.4);
+            -moz-transform: scale(0.4);
+            transform: scale(0.4);
+        }
+
+        &.x3 {
+            -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            left: 10%;
+            top: 40%;
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+
+        &.x4 {
+            -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            left: 20%;
+            top: 0;
+            -webkit-transform: scale(0.3);
+            -moz-transform: scale(0.3);
+            transform: scale(0.3);
+        }
+    }
+
 }
+
 
 /* KEYFRAMES */
 
@@ -440,129 +526,10 @@
     }
 }
 
-/* ANIMATIONS */
-
-.x1 {
-    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-
-    left: -5%;
-    top: 5%;
-
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    transform: scale(0.6);
-}
-
-.x2 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-
-    left: 5%;
-    top: 80%;
-
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
-}
-
-.x3 {
-    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-
-    left: 10%;
-    top: 40%;
-
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    transform: scale(0.7);
-}
-
-.x4 {
-    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-
-    left: 20%;
-    top: 0;
-
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
-}
-
-
-/* OBJECTS */
-
-.bubble {
-    opacity: 0.05;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
-    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-
-    height: 200px;
-    position: absolute;
-    width: 200px;
-}
-
-.bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
-    /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* IE10+ */
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
-    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-
-    content: "";
-    height: 180px;
-    left: 10px;
-    position: absolute;
-    width: 180px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%% Header Css Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 $color_1: #fff;
 $color_2: #999;
@@ -825,13 +792,10 @@ header#nav {
 
 
 
+//%%%%%%%%%%%%%%%%%%%%%%%%%%% Css Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%Footer Css Here%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-.mainFooter{
+//Footer css here
+.mainFooter {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -839,49 +803,46 @@ header#nav {
     text-align: center;
     padding-bottom: 16px;
     padding-top: 16px;
-   
-    &.hideFooter{
+
+    &.hideFooter {
         display: none;
     }
-    &.footerBg{
+
+    &.footerBg {
         background: #00000017;
         backdrop-filter: blur(10px);
     }
 
-    .firstMainContBtn{
-        &.btnBlockShow{
+    .firstMainContBtn {
+        &.btnBlockShow {
             display: block;
         }
-        &.btnBlockHide{
+
+        &.btnBlockHide {
             display: none;
         }
     }
-    .secondMainContBtn{
-        &.btnBlockShow{
+
+    .secondMainContBtn {
+        &.btnBlockShow {
             display: block;
         }
-        &.btnBlockHide{
+
+        &.btnBlockHide {
             display: none;
         }
     }
-    .thirdMainContBtn{
-        &.btnBlockShow{
+
+    .thirdMainContBtn {
+        &.btnBlockShow {
             display: block;
         }
-        &.btnBlockHide{
+
+        &.btnBlockHide {
             display: none;
         }
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -904,42 +865,45 @@ header#nav {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
-  }
 
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    display: none;
-  }
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        display: none;
 
-  .modal-content p {
-    color: red;
-  }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
 
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+            &:hover,
+            &:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
 
 
 
 
-  form input{
-    display:inline-block;
-    width:50px;
-    height:50px;
-    text-align:center;
-  }
+
+
+
+
+
+
+
+
+form input {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}

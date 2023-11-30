@@ -126,22 +126,6 @@ html {
 }
 
 body {
-    // margin: 0;
-    // padding: 25px;
-    // // background: linear-gradient(135deg, transparent -200%, #330070 45%);
-    // // background-image: url("../assets/img/bg-splash.png");
-    // background-image: url(../assets/img/1b.png), linear-gradient(135deg, #6600d5 22%, #6d00e8 6%, #5d00cf 15%, #410090 30%, #410090 -20%, #320070 54%, #320070 70%, #31006e 64%);
-    // background-position: 35% 100%;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // color: black;
-    // font-size: 25px;
-    // min-height: 100vh;
-    // position: relative;
-    // overflow: hidden;
-    // backdrop-filter: blur(100px);
-
-
     background: url(../assets/img/1bb.png), linear-gradient(135deg, #6b00e2 7%, #370076 39%, #330072 54%);
     //   background: #33026f ;
     background-position: 53% 100%;
@@ -160,11 +144,9 @@ body {
 
 
     &.loaded {
-
         background-size: 200% 100%;
         backdrop-filter: blur(0);
         // transition:  backdrop-filter 1s ease, background 1s ease;
-
         transition: backdrop-filter 0.1s ease, background-size 1s ease;
 
     }
