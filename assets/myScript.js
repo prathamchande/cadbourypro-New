@@ -438,13 +438,6 @@ if (window.location.pathname.endsWith("contact.html")) {
    window.location.href = "index.html";
     return; // Stop further execution
   }
-
-  if (submitType === "seventhSubmit") {
-    // window.location.reload();
-    window.location.href = "index.html";
-     return; // Stop further execution
-   }
-   
 //   if (submitType === "fifthSubmit") {
 //     // window.location.reload();
 
