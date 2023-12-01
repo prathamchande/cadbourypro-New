@@ -171,6 +171,19 @@
   border-color: #f3cb7f;
   transition: border-color 1s ease;
 }
+.mainPage.contactBody .mobile-container .middleContent .nudge-popup {
+  font-size: 16px;
+  border-radius: 16px;
+  padding: 10px;
+  background: #e7b464;
+  font-family: Gibson;
+  color: #340073;
+  position: absolute;
+  left: 0;
+  margin: 22px;
+  max-width: 320px;
+  min-width: 320px;
+}
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer,
 .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer,
@@ -217,6 +230,14 @@
   max-width: 360px;
   margin: auto;
   transition: all 10s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headText,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .headText,
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .headText {
+  text-align: center;
+  font-family: GibsonLight;
+  font-weight: bolder;
+  font-size: 16px;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
@@ -626,12 +647,19 @@ header#nav #menuWrapper {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border-radius: 16px;
+  width: 65%;
   display: none;
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  text-align: center;
+  font-family: "GibsonSemibold";
+  font-size: 22px;
 }
 .main_modal .modal-content .close {
-  color: #aaaaaa;
+  color: #340073;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -641,12 +669,107 @@ header#nav #menuWrapper {
   text-decoration: none;
   cursor: pointer;
 }
-
-form input {
+.main_modal .modal-content .container {
+  color: #340073;
+}
+.main_modal .modal-content .container .alertOtpValidation {
+  margin-bottom: 14px;
+}
+.main_modal .modal-content .container .resendOtp {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.main_modal .modal-content .container .resendOtp a {
+  font-size: 14px;
+}
+.main_modal .modal-content .container .formOtp .otpInput {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background: #340073;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.mainDetails {
+  margin-top: 12px;
+}
+.mainDetails .inputCommon {
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  font-style: normal;
+  font-size: 18px;
+  padding: 4px 16px 8px;
+  font-family: "GibsonRegular";
+  color: #340073;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.mainDetails .inputCommon::placeholder {
+  color: #a69f9f;
+  font-size: 16px;
+  font-family: "GibsonLight";
+  font-weight: 700;
+}
+.mainDetails .checkboxWrap1 {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.mainDetails .checkboxWrap1 .checkboxCD {
+  margin-right: 16px;
+}
+.mainDetails .checkboxWrap1 .checkboxLable {
+  font-size: 12px;
+  font-family: "GibsonLight";
+  letter-spacing: 0px;
+}
+.mainDetails .checkboxWrap1 .round {
+  position: relative;
+  max-width: 13px;
+  max-height: 13px;
+  margin-right: 16px;
+}
+.mainDetails .checkboxWrap1 .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+}
+.mainDetails .checkboxWrap1 .round label:after {
+  border: 2px solid #340073;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+.mainDetails .checkboxWrap1 .round input[type=checkbox] {
+  visibility: hidden;
+}
+.mainDetails .checkboxWrap1 .round input[type=checkbox]:checked + label {
+  background-color: #e1af6c;
+  border: 1px solid #e1af6c;
+}
+.mainDetails .checkboxWrap1 .round input[type=checkbox]:checked + label:after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

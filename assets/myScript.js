@@ -266,6 +266,7 @@ if (window.location.pathname.endsWith("contact.html")) {
   function validateAndNavigate(submitType) {
     var usernameInput = document.getElementById("username");
     var mobileNumberInput = document.getElementById("mobileNumber");
+    var emailInput = document.getElementById("email");
     var vehicle1Checkbox = document.getElementById("vehicle1");
     var vehicle2Checkbox = document.getElementById("vehicle2");
     var selectedCar = document.getElementById("cars");
@@ -297,6 +298,17 @@ if (window.location.pathname.endsWith("contact.html")) {
       } else {
         hideNudgePopup();
       }
+
+         // Validate email
+         if (!emailInput.value) {
+            showNudgePopup("Email cannot be empty.");
+            return;
+          } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+            showNudgePopup("Invalid email format.");
+            return;
+          } else {
+            hideNudgePopup();
+          }
 
       // Check if both checkboxes are checked
       if (!vehicle1Checkbox.checked || !vehicle2Checkbox.checked) {

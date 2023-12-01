@@ -75,24 +75,53 @@
 
     <!-- middle main content here -->
     <div class="middleContent">
-      <div id="nudgePopup" class="nudge-popup"> </div>
+      <div id="nudgePopup" class="nudge-popup"></div>
       <div id="firstMainContainerID" class="firstMainContainer activeCont">
 
         <div class="imgWallpaperWrap animate" onclick="navForIndex()">
           <img src="assets/img/wallpaper.png" alt="">
         </div>
 
-        <div class="text1 fSmiBold textAlignCent">Register to create</div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter your username">
+        <div class="headText">Register to create</div>
+      <form action="" class="mainDetails">
+        <input class="inputCommon mobileNo" type="text" id="mobileNumber" placeholder="Phone Number">
+        <input class="inputCommon inputUser" type="text" id="username" placeholder="Full Name">
 
-        <label for="mobileNumber">Mobile Number:</label>
-        <input type="text" id="mobileNumber" placeholder="Enter your mobile number">
+        
 
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> I have a bike</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> I have a car</label><br>
+        <input class="inputCommon email" type="email" id="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="Email ID">
+
+        <!-- <div class="checkboxWrap1">
+          <input class="checkboxCD" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label class="checkboxLable" for="vehicle1">I accept Terms & Conditions and Privacy Policy of Mondelez (Cadbury)</label>
+        </div> -->
+        <!-- <div class="checkboxWrap1">
+          <input class="checkboxCD" type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label class="checkboxLable" for="vehicle2">I would kike to receive promotional communication from Mondelez (Cadbury) about its products and offers.</label>
+  
+  
+  
+        </div> -->
+        <div class="checkboxWrap1">
+          <div class="round">
+            <input class="checkboxCD" type="checkbox"  type="checkbox" id="vehicle1" name="vehicle1" />
+            <label for="checkbox"></label>
+          </div>
+          <label class="checkboxLable" for="vehicle1">I accept Terms & Conditions and Privacy Policy of Mondelez (Cadbury)</label>
+
+      </div>
+        <div class="checkboxWrap1">
+            <div class="round">
+              <input class="checkboxCD" type="checkbox"  type="checkbox" id="vehicle2" name="vehicle2"/>
+              <label for="checkbox"></label>
+            </div>
+            <label class="checkboxLable" for="vehicle2">I would kike to receive promotional communication from Mondelez (Cadbury) about its products and offers.</label>
+  
+        </div>
+
+
+      </form>
+    
       </div>
 
       <div id="secondMainContainerID" class="secondMainContainer hiddenCont">
@@ -170,15 +199,15 @@
         <div class="modal-content firstModal">
           <span class="close">&times;</span>
           <div class="container">
-            <div id="alertOtpValidationID" class="alertOtpValidation" style="display: none;">Invalid OTP. Please try
-              again.</div>
+            <div id="alertOtpValidationID" class="alertOtpValidation">Enter OTP</div>
             <form action="" class="formOtp">
               <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1>
               <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1>
               <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1>
               <input class="otpInput" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1>
             </form>
-            <button class="commonBtn" onclick="validateOtpAndNavigate()">Verify OTP</button>
+            <div class="resendOtp"><a href="">Resend OTP</a></div>
+            <button class="commonBtn" onclick="validateOtpAndNavigate()">Submit</button>
 
           </div>
         </div>
