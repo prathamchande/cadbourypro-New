@@ -438,6 +438,13 @@ if (window.location.pathname.endsWith("contact.html")) {
    window.location.href = "index.html";
     return; // Stop further execution
   }
+
+  if (submitType === "seventhSubmit") {
+    // window.location.reload();
+    window.location.href = "index.html";
+     return; // Stop further execution
+   }
+
 //   if (submitType === "fifthSubmit") {
 //     // window.location.reload();
 
@@ -511,7 +518,7 @@ if (window.location.pathname.endsWith("contact.html")) {
 
 //text rotation
 
-if (window.location.pathname.endsWith("index.html")) {
+
   let words = document.querySelectorAll(".word");
 
   words.forEach((word) => {
@@ -558,7 +565,7 @@ if (window.location.pathname.endsWith("index.html")) {
 
   rotateText();
   setInterval(rotateText, 4000);
-}
+
 
 /////////////////////////////////////////////////////////////////////////
 //testing purpose
