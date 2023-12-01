@@ -132,7 +132,6 @@
 .mainPage.contactBody .mobile-container {
   display: block;
   max-height: calc(100vh - 70px);
-  overflow-y: auto;
 }
 .mainPage.contactBody .mobile-container h1 {
   color: green;
