@@ -653,8 +653,35 @@ function visbil() {
     setTimeout(function() {
         var forGenrateSongButton = document.getElementById('forGenrateSong');
         forGenrateSongButton.classList.remove('visiNone');
-    }, 10000);
+    }, 15000);
 }
 /////////////////////////////////////////////////////////////////////////
+function animationWork() {
+    var animationElement = document.getElementById('animationGerratID');
+    var animationClasses = ['frMusic1', 'frMusic2', 'frMusic3', 'frMusic4'];
+    var currentIndex = 0;
+    var duration = 100; // Total duration in seconds
+    var interval = 2000; // Change class every 5 seconds
+
+    var animationInterval = setInterval(function () {
+        // Change the class
+        animationElement.className = 'imgWallpaperWrap ' + animationClasses[currentIndex];
+
+        // Increment index for the next class
+        currentIndex++;
+
+        // Reset index when it reaches the end of the classes array
+        if (currentIndex === animationClasses.length) {
+            currentIndex = 0;
+        }
+
+        // Stop the interval after the specified duration
+        duration -= 5;
+        if (duration <= 0) {
+            clearInterval(animationInterval);
+        }
+    }, interval);
+} 
 
 /////////////////////////////////////////////////////////////////////////
+// animationWork()

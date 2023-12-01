@@ -132,7 +132,7 @@
 .mainPage.contactBody .mobile-container {
   display: block;
   max-height: calc(100vh - 70px);
-  overflow: scroll;
+  overflow-y: auto;
 }
 .mainPage.contactBody .mobile-container h1 {
   color: green;
@@ -352,7 +352,7 @@
 }
 .mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .mainDetails {
   max-height: 29vh;
-  overflow: scroll;
+  overflow-y: auto;
 }
 .mainPage.contactBody .mobile-container .middleContent .fifthMainContainer .songWrap {
   background: #fff;
@@ -365,9 +365,80 @@
   margin: auto;
   margin-top: 60px;
   max-height: calc(100vh - 300px);
-  overflow: scroll;
+  overflow-y: auto;
   max-width: 360px;
   min-height: calc(100vh - 300px);
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap {
+  min-height: 400px;
+  max-height: 400px;
+  max-width: 300px;
+  min-width: 300px;
+  margin: auto;
+  background: transparent;
+  position: relative;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim {
+  position: absolute;
+  max-width: 38px;
+  transform: scale(1.5);
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim.first {
+  bottom: 13px;
+  left: 50%;
+  transform: rotateZ(0deg) scale(1.5);
+  animation-name: musicRortaion;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  transition: all 1s ease;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim.second {
+  bottom: 110%;
+  animation-name: buoolnUpside;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  transition: all 1s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim.third {
+  bottom: 0;
+  right: 0;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim.fourth {
+  right: 0%;
+  bottom: 100%;
+  animation-name: buoolnUpside2;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  transition: all 1s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap .firstSmallAnim.fifth {
+  left: 0;
+  animation-name: Upside2sing;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  transition: all 1s ease;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap.frMusic1 {
+  background: url(../assets/img/guitar2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background 1s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap.frMusic2 {
+  background: url(../assets/img/headphone.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background 1s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .imgWallpaperWrap.frMusic3 {
+  background: url(../assets/img/wallpaper.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background 1s ease;
 }
 .mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare {
   border: 1px solid gold;
@@ -426,7 +497,7 @@
 .mainPage.infoBody .mobile-container {
   display: block;
   max-height: calc(100vh - 70px);
-  overflow: scroll;
+  overflow-y: auto;
 }
 .mainPage.infoBody .mobile-container h1 {
   color: yellow;
@@ -434,7 +505,7 @@
 .mainPage.designSystem .mobile-container {
   display: block;
   max-height: calc(100vh - 70px);
-  overflow: scroll;
+  overflow-y: auto;
 }
 .mainPage.designSystem .mobile-container h1 {
   color: yellow;
@@ -983,6 +1054,47 @@ header#nav #menuWrapper {
   font-size: 18px;
   padding: 0px 18px;
   font-weight: 700;
+}
+
+@keyframes buoolnUpside {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 110%;
+  }
+}
+@keyframes buoolnUpside2 {
+  0% {
+    bottom: 0%;
+    right: 95%;
+  }
+  100% {
+    bottom: 100%;
+    right: 0%;
+  }
+}
+@keyframes musicRortaion {
+  0% {
+    transform: rotateZ(308deg) scale(0.5);
+    left: 50%;
+    bottom: 13px;
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1.5);
+    left: 50%;
+    bottom: 13px;
+  }
+}
+@keyframes Upside2sing {
+  0% {
+    left: 0%;
+    transform: scale(0);
+  }
+  100% {
+    left: 0%;
+    transform: scale(1.5);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
