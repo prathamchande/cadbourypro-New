@@ -276,17 +276,18 @@ if (window.location.pathname.endsWith("contact.html")) {
     // username mobile number opt validation on first submit button
     if (submitType === "firstSubmit") {
               // Validate mobile number
-      if (!mobileNumberInput.value) {
-        showNudgePopup("Mobile number cannot be empty.");
-        return;
-      } else if (!/^\d+$/.test(mobileNumberInput.value)) {
-        showNudgePopup(
-          "You are not allowed any characters in the mobile number."
-        );
-        return;
-      } else {
-        hideNudgePopup();
-      }
+              if (!mobileNumberInput.value) {
+                showNudgePopup("Mobile number cannot be empty.");
+                return;
+              } else if (!/^\d+$/.test(mobileNumberInput.value)) {
+                showNudgePopup("You are not allowed any characters in the mobile number.");
+                return;
+              } else if (mobileNumberInput.value.length !== 10) {
+                showNudgePopup("Mobile number should be 10 digits.");
+                return;
+              } else {
+                hideNudgePopup();
+              }
 
 
       // Validate username
@@ -327,8 +328,9 @@ if (window.location.pathname.endsWith("contact.html")) {
       if (
         mobileNumberInput.value ||
         usernameInput.value ||
+        emailInput.value ||
         vehicle1Checkbox.checked ||
-        vehicle2Checkbox.checked
+        vehicle2Checkbox.checked 
       ) {
         showModalWithContent("firstModal");
         return;
