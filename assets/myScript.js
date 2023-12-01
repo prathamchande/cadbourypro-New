@@ -648,7 +648,13 @@ function scrollContainerDown() {
   answerMoreButton.disabled = true;
 }
 /////////////////////////////////////////////////////////////////////////
-
+function visbil() {
+    // Set a timeout to remove the "noVisible" class after 10 seconds
+    setTimeout(function() {
+        var forGenrateSongButton = document.getElementById('forGenrateSong');
+        forGenrateSongButton.classList.remove('visiNone');
+    }, 10000);
+}
 /////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////

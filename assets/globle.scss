@@ -568,6 +568,7 @@ a {
         color: #f1edf9;
     }
     &.visiNone{
-        visibility: hidden
+        visibility: hidden;
+        transition: visibility 1s ease;
     };
 }

@@ -524,6 +524,7 @@ a {
 }
 .commonBtn.visiNone {
   visibility: hidden;
+  transition: visibility 1s ease;
 }
 
 /*# sourceMappingURL=globle.css.map */
