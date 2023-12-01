@@ -273,6 +273,20 @@ if (window.location.pathname.endsWith("contact.html")) {
 
     // username mobile number opt validation on first submit button
     if (submitType === "firstSubmit") {
+              // Validate mobile number
+      if (!mobileNumberInput.value) {
+        showNudgePopup("Mobile number cannot be empty.");
+        return;
+      } else if (!/^\d+$/.test(mobileNumberInput.value)) {
+        showNudgePopup(
+          "You are not allowed any characters in the mobile number."
+        );
+        return;
+      } else {
+        hideNudgePopup();
+      }
+
+      
       // Validate username
       if (!usernameInput.value) {
         showNudgePopup("Username cannot be empty.");
@@ -286,18 +300,7 @@ if (window.location.pathname.endsWith("contact.html")) {
         hideNudgePopup();
       }
 
-      // Validate mobile number
-      if (!mobileNumberInput.value) {
-        showNudgePopup("Mobile number cannot be empty.");
-        return;
-      } else if (!/^\d+$/.test(mobileNumberInput.value)) {
-        showNudgePopup(
-          "You are not allowed any characters in the mobile number."
-        );
-        return;
-      } else {
-        hideNudgePopup();
-      }
+
 
          // Validate email
          if (!emailInput.value) {

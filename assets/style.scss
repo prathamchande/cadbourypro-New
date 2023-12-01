@@ -282,6 +282,7 @@
     margin: 22px;
     max-width: 320px;
     min-width: 320px;
+    z-index: 999;
 }
 
 
@@ -324,10 +325,32 @@
               
                .headText{
                 text-align: center;
-                font-family: GibsonLight;
-                font-weight: bolder;
+                font-family: 'Gibson';
+                font-weight: 600;
                 font-size: 16px;
+                letter-spacing: 1.5px;
                }
+             }
+
+             .firstMainContainer{
+
+             }
+             .secondMainContainer{
+                .mainDetails{
+margin-top: -40px;
+                }
+                .headText{
+                    margin-bottom: 10px;
+                }
+                .headTextTop{
+                    text-align: center;
+                    font-family: GibsonLight;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    position: relative;
+                    top: 26px;
+                    letter-spacing: 2px;
+                }
              }
 
 
@@ -1058,5 +1081,26 @@ header#nav {
 
   
 }
+    .selectBoxC{
+        border-radius: 16px;
+        width: 100%;
+        outline: none;
+        border: none;
+        height: 36px;
+        font-family: 'GibsonRegular';
+        color: #340073;
+        font-size: 18px;
+        padding: 0px 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
 
+        option{
+            font-family: 'GibsonRegular';
+            color: #340073;
+            font-size: 18px;
+            font-size: 18px;
+        padding: 0px 18px;
+        font-weight: 700;
+        }
+    }
 }

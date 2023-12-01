@@ -76,7 +76,7 @@
     <!-- middle main content here -->
     <div class="middleContent">
       <div id="nudgePopup" class="nudge-popup"></div>
-      <div id="firstMainContainerID" class="firstMainContainer activeCont">
+      <div id="firstMainContainerID" class="firstMainContainer activeCont" >
 
         <div class="imgWallpaperWrap animate" onclick="navForIndex()">
           <img src="assets/img/wallpaper.png" alt="">
@@ -125,17 +125,34 @@
       </div>
 
       <div id="secondMainContainerID" class="secondMainContainer hiddenCont">
-        <div class="imgWallpaperWrap">
-          <img src="assets/img/wallpaper.png" alt="">
+        <div class="headTextTop">Tell us about your loved one...</div>
+        <div class="imgWallpaperWrap" style="opacity: 1;">
+          <img src="assets/img/gift.png" alt="">
         </div>
-        Hello world second
-        <select name="cars" id="cars">
-          <option value=""></option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
+        <form action="" class="mainDetails">
+        <div class="headText">Their name</div>
+        <input class="inputCommon lovedName" type="text" id="lovedNameId" placeholder="Who's Birthday?">
+
+        <div class="headText">How old they'll be this birthday</div>
+        <select class="selectBoxC" name="gender" id="cars">
+          <option value="23">23 Years</option>
+          <option value="24">24 Years</option>
         </select>
+        <div class="headText">Gender</div>
+
+        <select class="selectBoxC" name="gender" id="cars">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </form>
       </div>
+
+
+
+
+
+
+
       <div id="thirdMainContainerID" class="thirdMainContainer hiddenCont">
         <div class="imgWallpaperWrap">
           <img src="assets/img/wallpaper.png" alt="">

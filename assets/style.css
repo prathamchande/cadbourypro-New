@@ -183,6 +183,7 @@
   margin: 22px;
   max-width: 320px;
   min-width: 320px;
+  z-index: 999;
 }
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer,
@@ -235,9 +236,25 @@
 .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .headText,
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer .headText {
   text-align: center;
+  font-family: "Gibson";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .mainDetails {
+  margin-top: -40px;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headText {
+  margin-bottom: 10px;
+}
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headTextTop {
+  text-align: center;
   font-family: GibsonLight;
   font-weight: bolder;
   font-size: 16px;
+  position: relative;
+  top: 26px;
+  letter-spacing: 2px;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
@@ -770,6 +787,27 @@ header#nav #menuWrapper {
 }
 .mainDetails .checkboxWrap1 .round input[type=checkbox]:checked + label:after {
   opacity: 1;
+}
+.mainDetails .selectBoxC {
+  border-radius: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 36px;
+  font-family: "GibsonRegular";
+  color: #340073;
+  font-size: 18px;
+  padding: 0px 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.mainDetails .selectBoxC option {
+  font-family: "GibsonRegular";
+  color: #340073;
+  font-size: 18px;
+  font-size: 18px;
+  padding: 0px 18px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
