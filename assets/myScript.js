@@ -267,9 +267,11 @@ if (window.location.pathname.endsWith("contact.html")) {
     var usernameInput = document.getElementById("username");
     var mobileNumberInput = document.getElementById("mobileNumber");
     var emailInput = document.getElementById("email");
-    var vehicle1Checkbox = document.getElementById("vehicle1");
-    var vehicle2Checkbox = document.getElementById("vehicle2");
-    var selectedCar = document.getElementById("cars");
+    var vehicle1Checkbox = document.getElementById("agree1");
+    var vehicle2Checkbox = document.getElementById("agree2");
+    var selectedlovedNameId = document.getElementById("lovedNameId");
+    var selectedlovedAge = document.getElementById("lovedAge");
+    var selectedlovedGender = document.getElementById("lovedGender");
 
     // username mobile number opt validation on first submit button
     if (submitType === "firstSubmit") {
@@ -286,7 +288,7 @@ if (window.location.pathname.endsWith("contact.html")) {
         hideNudgePopup();
       }
 
-      
+
       // Validate username
       if (!usernameInput.value) {
         showNudgePopup("Username cannot be empty.");
@@ -334,12 +336,26 @@ if (window.location.pathname.endsWith("contact.html")) {
     }
 
     // Validate selected car only when moving from the second to the third block
-    if (submitType === "secondSubmit" && selectedCar.value === "") {
-      showNudgePopup("Please select a car before proceeding.");
-      return;
-    } else {
-      hideNudgePopup();
-    }
+    if (submitType === "secondSubmit") {
+        if (selectedlovedNameId.value === "") {
+            showNudgePopup("Please select a Loved Name please.");
+            return;
+          } else {
+            hideNudgePopup();
+          }
+        if (selectedlovedAge.value === "") {
+            showNudgePopup("Please select a Age");
+            return;
+          } else {
+            hideNudgePopup();
+          }
+          if (selectedlovedGender.value === "") {
+            showNudgePopup("Please select a Gender");
+            return;
+          } else {
+            hideNudgePopup();
+          }
+    } 
 
     // If all validations pass, proceed with navigation
     navigate(submitType);
