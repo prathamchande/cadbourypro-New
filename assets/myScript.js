@@ -566,6 +566,48 @@ function navForIndex() {
     window.location.href = "index.html";
 }
 /////////////////////////////////////////////////////////////////////////
+function toggleMoodVibe(clickedElement) {
+    // Remove the 'selected' class from all elements with class 'imgBgVib'
+    var allImgBgVibElements = document.querySelectorAll('.imgBgVib');
+    var allImgBgVibElements2 = document.querySelectorAll('.imgBgVib2');
+    var allImgBgVibElements3 = document.querySelectorAll('.imgBgVib3');
+
+    if(allImgBgVibElements){
+        allImgBgVibElements.forEach(function(element) {
+            element.classList.remove('selected');
+        });
+    } else if(allImgBgVibElements2){
+        allImgBgVibElements.forEach(function(element) {
+            element.classList.remove('selected');
+        });
+    } else  if(allImgBgVibElements3){
+        allImgBgVibElements.forEach(function(element) {
+            element.classList.remove('selected');
+        });
+    }
+   
+
+    // Add the 'selected' class only to the clicked element
+    clickedElement.classList.add('selected');
+}
+
+function toggleMoodVibe(clickedElement) {
+    // Get the parent block of the clicked element
+    var parentBlock = clickedElement.closest('.vibeBlock');
+
+    // Remove the 'selected' class from all elements within the same block
+    var allElements = parentBlock.querySelectorAll('.imgBgVib, .imgBgVib2, .imgBgVib3');
+    allElements.forEach(function(element) {
+        element.classList.remove('selected');
+    });
+
+    // Add the 'selected' class only to the clicked element
+    clickedElement.classList.add('selected');
+}
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////
 

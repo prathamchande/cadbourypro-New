@@ -270,6 +270,83 @@
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer .mainDetails {
   margin-top: -40px;
 }
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap {
+  max-height: 42vh;
+  overflow-y: scroll;
+  margin-top: -50px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock {
+  border: 2px solid #e6b46c;
+  border-radius: 16px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .headTypeMood {
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  background: #e6b46c;
+  border-radius: 13px 13px 0px 0px;
+  margin-bottom: 12px;
+  color: #340073;
+  font-family: "GibsonSemibold";
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap {
+  padding: 0px 16px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst {
+  display: inline-block;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib2,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib3 {
+  background: white;
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib img,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib2 img,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib3 img {
+  max-width: 24px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib.selected,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib2.selected,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .imgBgVib3.selected {
+  background: #e6b46c;
+  transition: background 0.5s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock .vibeIconWrap .iconFirst .moodTypeText {
+  font-family: "GibsonRegular";
+  font-size: 8px;
+  text-align: center;
+  margin-top: 6px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVibe, .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodGenre, .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVoic {
+  margin-bottom: 30px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVoic {
+  margin-bottom: 160px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVoic .vibeIconWrap {
+  justify-content: space-around;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVoic .vibeIconWrap .iconFirst .imgBgVib2 {
+  min-height: 60px;
+  min-width: 100px;
+  max-height: 60px;
+  max-width: 100px;
+  border-radius: 8px;
+}
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .vibeBlockWrap .vibeBlock.moodVoic .vibeIconWrap .iconFirst .imgBgVib2 img {
+  max-width: 40px;
+  padding-bottom: 14px;
+}
 .mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .imgWallpaperWrap {
   margin-top: 50px !important;
 }
@@ -818,6 +895,7 @@ header#nav #menuWrapper {
   letter-spacing: 1px;
   margin-bottom: 12px;
   width: 100%;
+  font-weight: 700;
 }
 .mainDetails .inputCommon::placeholder {
   color: #a69f9f;
@@ -890,6 +968,13 @@ header#nav #menuWrapper {
   padding: 0px 18px;
   font-weight: 700;
   margin-bottom: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(./img/icon_arrow.png);
+  background-repeat: no-repeat;
+  background-position-x: 96%;
+  background-position-y: 14px;
+  background-size: 12px;
 }
 .mainDetails .selectBoxC option {
   font-family: "GibsonRegular";

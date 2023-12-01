@@ -74,9 +74,10 @@
     
 
     <!-- middle main content here -->
+    <!-- activeCont -->
     <div class="middleContent">
       <div id="nudgePopup" class="nudge-popup" ></div>
-      <div id="firstMainContainerID" class="firstMainContainer activeCont" >
+      <div id="firstMainContainerID" class="firstMainContainer hiddenCont" >
 
         <div class="imgWallpaperWrap animate" onclick="navForIndex()">
           <img src="assets/img/wallpaper.png" alt="">
@@ -121,6 +122,10 @@
         <select class="selectBoxC" name="gender" id="lovedAge">
           <option value="23">23 Years</option>
           <option value="24">24 Years</option>
+          <option value="25">25 Years</option>
+          <option value="26">26 Years</option>
+          <option value="27">27 Years</option>
+          <option value="28">28 Years</option>
         </select>
         <div class="headText">Gender</div>
 
@@ -131,10 +136,146 @@
       </form>
       </div>
 
-      <div id="thirdMainContainerID" class="thirdMainContainer hiddenCont">
+      <div id="thirdMainContainerID" class="thirdMainContainer activeCont">
         <div class="headTextTop">What would you like their song's vibe to be?</div>
-        <div class="imgWallpaperWrap">
+        <div class="imgWallpaperWrap" style="opacity: 1;">
           <img src="assets/img/headphone.png" alt="">
+        </div>
+
+        <div class="vibeBlockWrap">
+          <div class="vibeBlock moodVibe">
+            <div class="headTypeMood">Mood</div>
+            <div class="vibeIconWrap">
+              <div class="iconFirst">
+                <div class="imgBgVib"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mood1.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Happy
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib selected"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mood2.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Romantic
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mood3.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Funny
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mood4.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Motivational
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mood5.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Calm
+                </div>
+              </div>
+            
+            </div>
+       
+          </div>
+         
+
+
+          <div class="vibeBlock moodGenre">
+            <div class="headTypeMood">Genre</div>
+            <div class="vibeIconWrap">
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/boombox.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Happy
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mi1.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Romantic
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mi2.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Funny
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mi4.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Motivational
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/mi1.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Calm
+                </div>
+              </div>
+            
+            </div>
+       
+          </div>
+
+
+          
+          <div class="vibeBlock moodVoic">
+            <div class="headTypeMood">Genre</div>
+            <div class="vibeIconWrap">
+              <div class="iconFirst">
+                <div class="imgBgVib2 selected"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/male.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Male
+                </div>
+              </div>
+
+              <div class="iconFirst">
+                <div class="imgBgVib2"  onclick="toggleMoodVibe(this)">
+                  <img src="assets/img/female.png" alt="">
+                </div>
+                <div class="moodTypeText">
+                  Female
+                </div>
+              </div>
+
+            
+            </div>
+       
+          </div>
         </div>
       </div>
 
