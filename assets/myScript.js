@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const desktopMessage = document.querySelector(".desktop-message");
 
   function updateDisplay() {
-    console.log("Window width:", window.innerWidth);
-    console.log("Window height:", window.innerHeight);
+    //console.log("Window width:", window.innerWidth);
+    //console.log("Window height:", window.innerHeight);
 
     if (isMobile()) {
-      console.log("Switching to mobile view.");
+     // console.log("Switching to mobile view.");
       desktopMessage.style.display = "none";
       mobileContainer.style.display = "block";
     } else {
-      console.log("Switching to desktop view.");
+    //  console.log("Switching to desktop view.");
       mobileContainer.style.display = "none";
       desktopMessage.style.display = "block";
     }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update display on window resize
   window.addEventListener("resize", function () {
-    console.log("Window resized.");
+   // console.log("Window resized.");
     updateDisplay();
   });
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //for otp input validation
 let digitValidate = function (ele) {
-  console.log(ele.value);
+ // console.log(ele.value);
   ele.value = ele.value.replace(/[^0-9]/g, "");
 };
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (hamburger) {
     hamburger.addEventListener("click", function (event) {
-      console.log("header");
+      //console.log("header");
       event.preventDefault();
       document.getElementById("nav").classList.add("showNav");
       var winHeight = window.outerHeight;
@@ -335,7 +335,7 @@ if (window.location.pathname.endsWith("contact.html")) {
       }
     }
 
-    // Validate selected car only when moving from the second to the third block
+    // Validate second block only when moving from the second to the third block
     if (submitType === "secondSubmit") {
         if (selectedlovedNameId.value === "") {
             showNudgePopup("Please select a Loved Name please.");
@@ -356,6 +356,7 @@ if (window.location.pathname.endsWith("contact.html")) {
             hideNudgePopup();
           }
     } 
+
 
     // If all validations pass, proceed with navigation
     navigate(submitType);
@@ -426,10 +427,7 @@ if (window.location.pathname.endsWith("contact.html")) {
       containerIds[nextContainerIndex]
     );
     var nextButton = document.getElementById(buttonIds[nextContainerIndex]);
-    var nextProgressBar = document.getElementById(
-      progressBarIds[nextContainerIndex]
-    );
-
+    var nextProgressBar = document.getElementById(progressBarIds[nextContainerIndex]);
     nextContainer.classList.add("hiddenCont");
 
       // Reload the page before navigating to the next container if coming from seventh
@@ -438,6 +436,15 @@ if (window.location.pathname.endsWith("contact.html")) {
    window.location.href = "index.html";
     return; // Stop further execution
   }
+//   if (submitType === "fifthSubmit") {
+//     // window.location.reload();
+
+//     setTimeout(() => {
+//         document.getElementById("forGenrateSong").classList.remove("visiNone");
+//       }, 1000);
+    
+//      return; // Stop further execution
+//    }
     var childElementsFirst = nextContainer.querySelectorAll(".imgWallpaperWrap");
     var childElementsSecond = nextContainer.querySelectorAll(".bgWll");
     var childElementsThird = nextContainer.querySelectorAll(".bagWall");

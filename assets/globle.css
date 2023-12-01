@@ -522,5 +522,8 @@ a {
   background: #ad88e5;
   color: #f1edf9;
 }
+.commonBtn.visiNone {
+  visibility: hidden;
+}
 
 /*# sourceMappingURL=globle.css.map */

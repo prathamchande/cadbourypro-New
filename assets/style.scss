@@ -283,6 +283,8 @@
     max-width: 320px;
     min-width: 320px;
     z-index: 999;
+    transform: translate(-55%);
+    left: 50%;
 }
 
 
@@ -307,10 +309,30 @@
                         opacity: 1;
                         transition: all 1s ease;
                     }
+
+                    .headText{
+                        text-align: center;
+                        font-family: 'Gibson';
+                        font-weight: 600;
+                        font-size: 16px;
+                        letter-spacing: 1.5px;
+                        margin-bottom: 10px;
+                    }
+                    .headTextTop{
+                        text-align: center;
+                        font-family: GibsonLight;
+                        font-weight: bolder;
+                        font-size: 16px;
+                        position: relative;
+                        top: 26px;
+                        letter-spacing: 2px;
+                    }
                 }
+
+                .fourthMainContainer,
                 .secondMainContainer,
                 .thirdMainContainer,
-             .firstMainContainer{
+                .firstMainContainer{
                 .imgWallpaperWrap{
                     opacity: 0;
                     max-width: 360px;
@@ -319,40 +341,131 @@
                         opacity: 1;
                         max-width: 360px;
                         margin: auto;
-                        transition: all 10s ease;
+                        transition: all 2s ease;
                     }
                 }
               
-               .headText{
-                text-align: center;
-                font-family: 'Gibson';
-                font-weight: 600;
-                font-size: 16px;
-                letter-spacing: 1.5px;
-               }
+          
              }
 
              .firstMainContainer{
 
              }
+             .fourthMainContainer,
+             .thirdMainContainer,
              .secondMainContainer{
                 .mainDetails{
-margin-top: -40px;
+                margin-top: -40px;
                 }
-                .headText{
-                    margin-bottom: 10px;
-                }
-                .headTextTop{
-                    text-align: center;
-                    font-family: GibsonLight;
-                    font-weight: bolder;
-                    font-size: 16px;
-                    position: relative;
-                    top: 26px;
-                    letter-spacing: 2px;
-                }
+            
              }
 
+.fourthMainContainer{
+    .imgWallpaperWrap{
+        margin-top: 50px !important;
+    }
+    .mainDetails{
+        max-height: calc(100vh - 71vh);
+        overflow: scroll;
+    }
+}
+
+.fifthMainContainer{
+    .songWrap{
+        background: #fff;
+    color: #340073;
+    font-size: 20px;
+    border-radius: 16px;
+    padding: 20px;
+    padding-bottom: 0;
+    font-family: 'Gibson';
+    margin: auto;
+    margin-top: 60px;
+    max-height: calc(100vh - 300px);
+    overflow: scroll;
+    max-width: 360px;
+    min-height: calc(100vh - 300px);
+
+//     ::-webkit-scrollbar-track {max-height: 50%; height: 50%;
+//         // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+//         background-color: transparent;
+//         border-radius: 10px;}
+//     &::-webkit-scrollbar
+// {
+// 	width: 5px;
+//     background-color: transparent;
+// }
+// &::-webkit-scrollbar-thumb
+// {
+//     border-radius: 10px;
+//     background-color: #e7b464;
+// }
+    
+    
+    
+    }
+}
+
+
+.seventhMainContainer{
+    .songShare{
+        border: 1px solid gold;
+        border-radius: 16px;
+        max-width: 290px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 40px;
+        // min-height: calc(100vh - 300px);
+        // max-height: calc(100vh - 300px);
+        overflow: hidden;
+
+        .birthDayW1{
+            color: #e7b464;
+            font-family: DairyMilkFontMedium;
+            font-size: 16px;
+            text-align: center;
+        }
+.birthDayW2{
+    color: #e7b464;
+    font-family: DairyMilkFontMedium;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+.bgLast{
+    background: url(../assets/img/wallpaper-splash.png) no-repeat;
+    height: 187px;
+    margin: 20px 0;
+    background-position: center;
+    background-size: contain;
+}
+.msgBith{
+    font-size: 21px;
+    font-family: 'GibsonSemibold';
+    text-align: center;
+}
+.buttnShar{
+    position: relative;
+    display: flex;
+    bottom: -41px;
+    max-width: 365px;
+    background: transparent;
+    left: -40px;
+    min-width: 288px;
+    justify-content: space-between;
+    .commonBtn{
+        border-radius: inherit;
+        min-width: 142px;
+        &.bt1{
+            border-bottom-left-radius: 16px;
+        }
+        &.bt2{
+            border-bottom-right-radius: 16px;
+        }
+    }
+}
+    }
+}
 
 
             }

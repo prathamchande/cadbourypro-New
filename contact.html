@@ -75,7 +75,7 @@
 
     <!-- middle main content here -->
     <div class="middleContent">
-      <div id="nudgePopup" class="nudge-popup"></div>
+      <div id="nudgePopup" class="nudge-popup" ></div>
       <div id="firstMainContainerID" class="firstMainContainer activeCont" >
 
         <div class="imgWallpaperWrap animate" onclick="navForIndex()">
@@ -86,29 +86,13 @@
       <form action="" class="mainDetails">
         <input class="inputCommon mobileNo" type="text" id="mobileNumber" placeholder="Phone Number">
         <input class="inputCommon inputUser" type="text" id="username" placeholder="Full Name">
-
-        
-
         <input class="inputCommon email" type="email" id="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="Email ID">
-
-        <!-- <div class="checkboxWrap1">
-          <input class="checkboxCD" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-          <label class="checkboxLable" for="vehicle1">I accept Terms & Conditions and Privacy Policy of Mondelez (Cadbury)</label>
-        </div> -->
-        <!-- <div class="checkboxWrap1">
-          <input class="checkboxCD" type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-          <label class="checkboxLable" for="vehicle2">I would kike to receive promotional communication from Mondelez (Cadbury) about its products and offers.</label>
-  
-  
-  
-        </div> -->
         <div class="checkboxWrap1">
           <div class="round">
             <input class="checkboxCD" type="checkbox"  type="checkbox" id="agree1" name="agree1" />
             <label for="checkbox"></label>
           </div>
           <label class="checkboxLable" for="agree1">I accept Terms & Conditions and Privacy Policy of Mondelez (Cadbury)</label>
-
       </div>
         <div class="checkboxWrap1">
             <div class="round">
@@ -126,7 +110,7 @@
 
       <div id="secondMainContainerID" class="secondMainContainer hiddenCont">
         <div class="headTextTop">Tell us about your loved one...</div>
-        <div class="imgWallpaperWrap" style="opacity: 1;">
+        <div class="imgWallpaperWrap">
           <img src="assets/img/gift.png" alt="">
         </div>
         <form action="" class="mainDetails">
@@ -147,36 +131,68 @@
       </form>
       </div>
 
-
-
-
-
-
-
       <div id="thirdMainContainerID" class="thirdMainContainer hiddenCont">
+        <div class="headTextTop">What would you like their song's vibe to be?</div>
         <div class="imgWallpaperWrap">
-          <img src="assets/img/wallpaper.png" alt="">
+          <img src="assets/img/headphone.png" alt="">
         </div>
-        <div class="bgWll">ppc</div>
-        Hello world third (how old & male female)
       </div>
 
       <div id="fourthMainContainerID" class="fourthMainContainer hiddenCont">
-        Hello world fourth (song type)
+        <div class="headTextTop">Tell us about your loved one...</div>
+        <div class="imgWallpaperWrap">
+          <img src="assets/img/question.png" alt="">
+        </div>
+        <form action="" class="mainDetails">
+          <div class="headText">What's your pet name for them?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId1" placeholder="xxx xxx xxx">
+          <div class="headText">What make them angry?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId2" placeholder="xxx xxx xxx">
+          <div class="headText">What is the funniest thing they do?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId3" placeholder="xxx xxx xxx">
+          <div class="headText">What makes them smile?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId4" placeholder="xxx xxx xxx">
+          <div class="headText">What is their favourite movie?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId5" placeholder="xxx xxx xxx">
+          <div class="headText">Their favourite sport?</div>
+          <input class="inputCommon lovedName" type="text" id="lovedNameId6" placeholder="xxx xxx xxx">
+
+          </form>
       </div>
 
       <div id="fifthMainContainerID" class="fifthMainContainer hiddenCont">
-        Hello world fifth (tell me more about /pet name/angry)
-        Ready song view
+        <div class="headTextTop">Your song's lyrics are ready!</div>
+        <div class="songWrap text1 fLight">
+          It's your boy. gotta give a shoutout to Ronit. <br> Been my friend since we were kids,can you believe it:? <br>Playing football and FIFA. we were unstoppaable,<br>Frowing up togather.Our bond became unbreakable.<br>Best friends since four. through thic and thin. Drinks and memories, from the beginning,<br> I was the best man at your wedding.that's no lie. <br>Now in different countries.but our friendship won't die. <br>Even though we're miles apart, our reindship's never die.  It's your boy. gotta give a shoutout to Ronit. <br> Been my friend since we were kids,can you believe it:? 
+      
+        </div>
       </div>
 
-
       <div id="sixthMainContainerID" class="sixthMainContainer hiddenCont">
-        Hello world sixth (See song content)
+        <div class="headTextTop">Please wait while we compose your song....</div>
+        <div class="imgWallpaperWrap">
+          <img src="assets/img/headphone.png" alt="">
+        </div>
       </div>
 
       <div id="seventhMainContainerID" class="seventhMainContainer hiddenCont">
-        Hello world seventh (Song ready)
+        <div class="headTextTop"> Your unique song is ready!</div>
+       <div class="songShare">
+        <div class="birthDayW1">Happy Birthday</div>
+        <div class="birthDayW2">Rohit</div>
+        <div class="bgLast"></div>
+        <div class="msgBith">
+          It's your boy. gotta give a shoutout to Ronit. 
+
+        </div>
+        <div class="buttnShar">
+          <button class="commonBtn bt1">Share</button>
+
+  <button class="commonBtn bt2">Download</button>
+
+        </div>
+       </div>
+       
       </div>
 
 
@@ -240,18 +256,7 @@
           <span class="close">&times;</span>
           <p>You are nice man</p>
         </div>
-
       </div>
-
-
-
-
-
-
-
-
-
-
 
     </div>
     <!-- middle content end here -->
@@ -262,28 +267,29 @@
     <!-- footer content -->
     <div id="footerId" class="mainFooter footerBg">
       <div id="firstMainContBtnID" class="firstMainContBtn btnBlockShow">
-        <button class="commonBtn" onclick="validateAndNavigate('firstSubmit')">Go Second</button>
+        <button class="commonBtn" onclick="validateAndNavigate('firstSubmit')">Submit</button>
       </div>
       <div id="secondMainContBtnID" class="secondMainContBtn btnBlockHide">
-        <button class="commonBtn" onclick="validateAndNavigate('secondSubmit')">Go Third</button>
+        <button class="commonBtn" onclick="validateAndNavigate('secondSubmit')">Proceed</button>
       </div>
       <div id="thirdMainContBtnID" class="thirdMainContBtn btnBlockHide">
-        <button class="commonBtn" onclick="validateAndNavigate('thirdSubmit')">Go fourth</button>
+        <button class="commonBtn" onclick="validateAndNavigate('thirdSubmit')">Proceed</button>
       </div>
       <div id="fourthMainContBtnID" class="fourthMainContBtn btnBlockHide">
-        <button class="commonBtn" onclick="validateAndNavigate('fourthSubmit')">Go fifth</button>
+        <button class="commonBtn answerMore">Answer More</button>
+        <button class="commonBtn" onclick="validateAndNavigate('fourthSubmit')">Proceed</button>
       </div>
       <div id="fifthMainContBtnID" class="fifthMainContBtn btnBlockHide">
 
-        <button class="commonBtn answerMore" onclick="answerMore('answerMore')">AnswerMore</button>
-        <button class="commonBtn" onclick="validateAndNavigate('fifthSubmit')">Go sixth</button>
+        <button class="commonBtn answerMore">Regenrate Song</button>
+        <button class="commonBtn" onclick="validateAndNavigate('fifthSubmit')">Create Song</button>
       </div>
       <div id="sixthMainContBtnID" class="sixthMainContBtn btnBlockHide">
-        <button class="commonBtn answerMore" onclick="regenerate('regenrate')">RegenrateSong</button>
-        <button class="commonBtn" onclick="validateAndNavigate('sixthSubmit')">Go Seventh</button>
+        <button id="forGenrateSong" class="commonBtn" onclick="validateAndNavigate('sixthSubmit')">Let's Go</button>
       </div>
       <div id="seventhMainContBtnID" class="seventhMainContBtn btnBlockHide">
-        <button class="commonBtn" onclick="validateAndNavigate('seventhSubmit')">Go First</button>
+        <button class="commonBtn">Redeem Gift</button>
+        <button class="commonBtn" onclick="validateAndNavigate('seventhSubmit')">Create Again</button>
       </div>
     </div>
 

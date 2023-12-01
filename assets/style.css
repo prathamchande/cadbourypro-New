@@ -184,6 +184,8 @@
   max-width: 320px;
   min-width: 320px;
   z-index: 999;
+  transform: translate(-55%);
+  left: 50%;
 }
 .mainPage.contactBody .mobile-container .middleContent .firstMainContainer,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer,
@@ -217,37 +219,27 @@
   opacity: 1;
   transition: all 1s ease;
 }
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap,
-.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap,
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap {
-  opacity: 0;
-  max-width: 360px;
-  margin: auto;
-}
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap.animate,
-.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap.animate,
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap.animate {
-  opacity: 1;
-  max-width: 360px;
-  margin: auto;
-  transition: all 10s ease;
-}
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .headText,
 .mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headText,
 .mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .headText,
-.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .headText {
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .headText,
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer .headText,
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .headText,
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .headText {
   text-align: center;
   font-family: "Gibson";
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1.5px;
-}
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .mainDetails {
-  margin-top: -40px;
-}
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headText {
   margin-bottom: 10px;
 }
-.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headTextTop {
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .sixthMainContainer .headTextTop,
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .headTextTop {
   text-align: center;
   font-family: GibsonLight;
   font-weight: bolder;
@@ -255,6 +247,104 @@
   position: relative;
   top: 26px;
   letter-spacing: 2px;
+}
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .imgWallpaperWrap,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap,
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap {
+  opacity: 0;
+  max-width: 360px;
+  margin: auto;
+}
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .imgWallpaperWrap.animate,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .imgWallpaperWrap.animate,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .imgWallpaperWrap.animate,
+.mainPage.contactBody .mobile-container .middleContent .firstMainContainer .imgWallpaperWrap.animate {
+  opacity: 1;
+  max-width: 360px;
+  margin: auto;
+  transition: all 2s ease;
+}
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .mainDetails,
+.mainPage.contactBody .mobile-container .middleContent .thirdMainContainer .mainDetails,
+.mainPage.contactBody .mobile-container .middleContent .secondMainContainer .mainDetails {
+  margin-top: -40px;
+}
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .imgWallpaperWrap {
+  margin-top: 50px !important;
+}
+.mainPage.contactBody .mobile-container .middleContent .fourthMainContainer .mainDetails {
+  max-height: 29vh;
+  overflow: scroll;
+}
+.mainPage.contactBody .mobile-container .middleContent .fifthMainContainer .songWrap {
+  background: #fff;
+  color: #340073;
+  font-size: 20px;
+  border-radius: 16px;
+  padding: 20px;
+  padding-bottom: 0;
+  font-family: "Gibson";
+  margin: auto;
+  margin-top: 60px;
+  max-height: calc(100vh - 300px);
+  overflow: scroll;
+  max-width: 360px;
+  min-height: calc(100vh - 300px);
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare {
+  border: 1px solid gold;
+  border-radius: 16px;
+  max-width: 290px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 40px;
+  overflow: hidden;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .birthDayW1 {
+  color: #e7b464;
+  font-family: DairyMilkFontMedium;
+  font-size: 16px;
+  text-align: center;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .birthDayW2 {
+  color: #e7b464;
+  font-family: DairyMilkFontMedium;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .bgLast {
+  background: url(../assets/img/wallpaper-splash.png) no-repeat;
+  height: 187px;
+  margin: 20px 0;
+  background-position: center;
+  background-size: contain;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .msgBith {
+  font-size: 21px;
+  font-family: "GibsonSemibold";
+  text-align: center;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .buttnShar {
+  position: relative;
+  display: flex;
+  bottom: -41px;
+  max-width: 365px;
+  background: transparent;
+  left: -40px;
+  min-width: 288px;
+  justify-content: space-between;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .buttnShar .commonBtn {
+  border-radius: inherit;
+  min-width: 142px;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .buttnShar .commonBtn.bt1 {
+  border-bottom-left-radius: 16px;
+}
+.mainPage.contactBody .mobile-container .middleContent .seventhMainContainer .songShare .buttnShar .commonBtn.bt2 {
+  border-bottom-right-radius: 16px;
 }
 .mainPage.infoBody .mobile-container {
   display: block;
